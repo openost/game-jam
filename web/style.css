@@ -1,0 +1,280 @@
+@font-face {
+  font-family: Squareo;
+  src: url(fonts/squarefont/Squareo.ttf);
+}
+
+@font-face {
+  font-family: Square;
+  src: url(fonts/squarefont/Square.ttf);
+}
+
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-600.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 600;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-600italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-600italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 700;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-700italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-700italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-800.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-800.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-800italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 800;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-800italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-800italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-900.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-900.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* roboto-condensed-900italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 900;
+  src:
+    url("fonts/roboto/roboto-condensed-v31-latin-900italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-900italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+}
+
+main {
+  background: linear-gradient(0deg, #f9b26f, #f37947);
+  min-height: 100vh;
+  display: block;
+  padding: 0 5px;
+}
+
+.text {
+  line-height: 1.5;
+}
+
+p,
+a {
+  text-align: center;
+  margin: 0;
+  font-family: "Roboto Condensed";
+  font-weight: 800;
+}
+
+.desc {
+  font-size: 2em;
+  color: #a2482f;
+  margin-bottom: 5vh;
+}
+
+.desc > img {
+  display: inline;
+  width: 1.5em;
+  vertical-align: middle;
+}
+
+#open,
+#game-jam {
+  color: #943066;
+}
+
+.title {
+  padding-top: 3rem;
+  line-height: 1;
+}
+
+.title > p {
+  font-weight: 400;
+}
+
+#open {
+  font-size: 5em;
+  font-family: Squareo;
+}
+
+#game-jam {
+  font-size: 6em;
+  font-family: Square;
+}
+
+.date,
+.place {
+  color: #6f3129;
+}
+
+.date {
+  font-size: 2rem;
+}
+
+.place {
+  font-size: 2rem;
+}
+
+#url {
+  color: #210300;
+}
+
+footer {
+  padding-bottom: 3rem;
+}
+
+.visuals {
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  grid-template-areas:
+    "jam btn"
+    "jam lid";
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.visuals img {
+  width: 250px;
+}
+
+.img-jam {
+  grid-area: jam;
+}
+
+.img-lid {
+  grid-area: lid;
+  transform: rotate(-20deg);
+
+  margin-bottom: -50px;
+}
+
+.email {
+  grid-area: btn;
+}
+
+.email > a {
+  background-color: #943066;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8em 1em;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.email > a:hover {
+  background-color: #6f3129;
+}
+
+#game-jam,
+.place {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .text > p {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .date,
+  .place {
+    font-size: 1.5rem;
+  }
+
+  .visuals img {
+    width: 100%;
+  }
+
+  .visuals {
+    grid-template-areas: "btn btn" "jam -  " "jam lid";
+  }
+
+  .img-lid {
+    margin-bottom: 0;
+    margin-left: -30px;
+  }
+}
