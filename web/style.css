@@ -148,7 +148,7 @@ main {
   background: linear-gradient(0deg, #f9b26f, #f37947);
   min-height: 100vh;
   display: block;
-  padding: 0 5px;
+  padding: 3rem 5px;
 }
 
 section,
@@ -186,7 +186,6 @@ a {
 }
 
 .title {
-  padding-top: 3rem;
   line-height: 1;
   font-size: 1rem;
 }
@@ -213,19 +212,15 @@ h2 {
 
 h2 {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 #url {
   color: #210300;
 }
 
-footer {
-  padding-bottom: 3rem;
-}
-
 .visuals {
-  margin: auto;
+  margin: 0 auto 8rem auto;
   width: 90%;
   max-width: 500px;
   display: grid;
@@ -279,6 +274,24 @@ footer {
 .game {
   display: flex;
   margin: auto;
+  justify-content: center;
+}
+.game > iframe {
+  aspect-ratio: 1152 / 668;
+  max-width: 100vw;
+  height: auto;
+}
+
+.videos {
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+footer {
+  padding-bottom: 3rem;
 }
 
 @media (max-width: 600px) {
@@ -286,6 +299,7 @@ footer {
     display: none;
   }
 
+  .desc,
   .text > p {
     font-size: 20px;
   }
@@ -301,7 +315,6 @@ footer {
 
   h2 {
     text-align: center;
-    margin-top: 5rem;
   }
 
   .visuals img {
