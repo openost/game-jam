@@ -16,7 +16,9 @@
   font-weight: 400;
   src:
     url("fonts/roboto/roboto-condensed-v31-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-regular.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-italic - latin */
@@ -27,7 +29,9 @@
   font-weight: 400;
   src:
     url("fonts/roboto/roboto-condensed-v31-latin-italic.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-italic.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-600 - latin */
@@ -38,7 +42,8 @@
   font-weight: 600;
   src:
     url("fonts/roboto/roboto-condensed-v31-latin-600.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-600.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-600italic - latin */
@@ -48,8 +53,11 @@
   font-style: italic;
   font-weight: 600;
   src:
-    url("fonts/roboto/roboto-condensed-v31-latin-600italic.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-600italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("fonts/roboto/roboto-condensed-v31-latin-600italic.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-600italic.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-700 - latin */
@@ -60,7 +68,8 @@
   font-weight: 700;
   src:
     url("fonts/roboto/roboto-condensed-v31-latin-700.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-700italic - latin */
@@ -70,8 +79,11 @@
   font-style: italic;
   font-weight: 700;
   src:
-    url("fonts/roboto/roboto-condensed-v31-latin-700italic.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-700italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("fonts/roboto/roboto-condensed-v31-latin-700italic.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-700italic.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-800 - latin */
@@ -82,7 +94,8 @@
   font-weight: 800;
   src:
     url("fonts/roboto/roboto-condensed-v31-latin-800.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-800.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-800.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-800italic - latin */
@@ -92,8 +105,11 @@
   font-style: italic;
   font-weight: 800;
   src:
-    url("fonts/roboto/roboto-condensed-v31-latin-800italic.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-800italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("fonts/roboto/roboto-condensed-v31-latin-800italic.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-800italic.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-900 - latin */
@@ -104,7 +120,8 @@
   font-weight: 900;
   src:
     url("fonts/roboto/roboto-condensed-v31-latin-900.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-900.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-900.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* roboto-condensed-900italic - latin */
@@ -114,8 +131,11 @@
   font-style: italic;
   font-weight: 900;
   src:
-    url("fonts/roboto/roboto-condensed-v31-latin-900italic.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */ url("fonts/roboto/roboto-condensed-v31-latin-900italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    url("fonts/roboto/roboto-condensed-v31-latin-900italic.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("fonts/roboto/roboto-condensed-v31-latin-900italic.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 body {
@@ -162,6 +182,7 @@ a {
 .title {
   padding-top: 3rem;
   line-height: 1;
+  font-size: 1rem;
 }
 
 .title > p {
@@ -201,7 +222,7 @@ footer {
 
 .visuals {
   margin: auto;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   display: grid;
   grid-template-areas:
@@ -215,7 +236,7 @@ footer {
 }
 
 .visuals img {
-  width: 250px;
+  width: 220px;
 }
 
 .img-jam {
