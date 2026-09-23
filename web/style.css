@@ -141,6 +141,7 @@
 body {
   margin: 0;
   font-size: 15px;
+  font-family: "Roboto Condensed";
 }
 
 main {
@@ -148,6 +149,12 @@ main {
   min-height: 100vh;
   display: block;
   padding: 0 5px;
+}
+
+section,
+h1 {
+  padding: 0;
+  margin: 0;
 }
 
 .text {
@@ -158,7 +165,6 @@ p,
 a {
   text-align: center;
   margin: 0;
-  font-family: "Roboto Condensed";
   font-weight: 800;
 }
 
@@ -199,17 +205,15 @@ a {
   font-family: Square;
 }
 
-.date,
-.place {
+.h2,
+h2 {
   color: #6f3129;
-}
-
-.date {
   font-size: 2rem;
 }
 
-.place {
-  font-size: 2rem;
+h2 {
+  text-align: center;
+  margin-top: 8rem;
 }
 
 #url {
@@ -272,7 +276,16 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+.game {
+  display: flex;
+  margin: auto;
+}
+
 @media (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }
+
   .text > p {
     font-size: 20px;
   }
@@ -281,9 +294,14 @@ footer {
     font-size: 12px;
   }
 
-  .date,
-  .place {
+  h2,
+  .h2 {
     font-size: 1.5rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 5rem;
   }
 
   .visuals img {
