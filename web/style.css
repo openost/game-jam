@@ -157,21 +157,27 @@ h1 {
   margin: 0;
 }
 
-.text {
+.subtitle {
   line-height: 1.5;
 }
 
-p,
-a {
+.title p,
+.subtitle a,
+.subtitle p {
   text-align: center;
-  margin: 0;
   font-weight: 800;
+}
+
+.title p,
+.date,
+.place {
+  margin: 0;
 }
 
 .desc {
   font-size: 2em;
   color: #a2482f;
-  margin-bottom: 5vh;
+  text-align: center;
 }
 
 .desc > img {
@@ -215,8 +221,13 @@ h2 {
   margin-top: 5rem;
 }
 
-#url {
-  color: #210300;
+.content {
+  max-width: 700px;
+  font-size: 1.2rem;
+  margin: auto;
+  padding: 0 20px;
+  font-weight: 400;
+  text-align: left;
 }
 
 .visuals {
@@ -300,7 +311,7 @@ footer {
   }
 
   .desc,
-  .text > p {
+  .subtitle > p {
     font-size: 20px;
   }
 
