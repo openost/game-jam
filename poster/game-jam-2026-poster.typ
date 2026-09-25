@@ -8,7 +8,7 @@
 #let c5 = rgb("#000000")
 #let c6 = rgb("#E5E3E2")
 
-#let f1 = "Futura-CondensedExtraBold"
+#let f1 = "Roboto"
 #let f2 = "SquareFont Outline"
 #let f3 = "SquareFont"
 
@@ -18,7 +18,7 @@
 
 #set page(fill: gradient.linear(dir: ttb, c1, c2), margin: 1cm)
 #set align(center)
-#set text(font: f1)
+#set text(font: f1, weight: "extrabold")
 
 #set par(leading: 2em)
 
@@ -87,12 +87,7 @@
   #place(dx: .6cm, image("/web/img/jam.png", height: 10cm))
   #place(dx: 8cm, dy: 5cm, rotate(-10deg, [
     #place(image("/web/img/jam-lid.png", width: 10cm))
-    #place(dx: 3.5cm, dy: 2cm, qrcode(
-      "game-jam.open-ost.ch",
-      colors: (c6, c5),
-      quiet-zone: 1,
-      width: 3cm,
-    ))
+    #place(dx: 3.5cm, dy: 2cm, qrcode("game-jam.open-ost.ch", colors: (c6, c5), quiet-zone: 1, width: 3cm))
   ]))
 ]
 
