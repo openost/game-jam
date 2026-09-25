@@ -8,7 +8,7 @@
 #let c5 = rgb("#000000")
 #let c6 = rgb("#E5E3E2")
 
-#let f1 = "Roboto"
+#let f1 = "Futura-CondensedExtraBold"
 #let f2 = "SquareFont Outline"
 #let f3 = "SquareFont"
 
@@ -47,7 +47,7 @@
   #place(dx: 17.6cm, dy: 1cm, bx(c3))
 ])
 
-#text(size: 4em, fill: c4)[
+#text(size: 3.5em, fill: c4)[
   20.–22. November 2026 \
   #text(size: .75em)[OST Rapperswil]
 ]
