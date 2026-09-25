@@ -9,7 +9,7 @@ Pixelart (+ first poster design)
 typst commands
 ```shell
 typst watch poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root .
-typst compile poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root .
+typst compile poster/poster.typ --font-path=web/fonts/ --root .
 ```
 
 Used fonts in /web/fonts

@@ -16,6 +16,9 @@
 #let bxb = bx.with(s: 1.8em)
 #let bxs = bx.with(s: 1em)
 
+#let line(c) = box(fill: c, stroke: c, height: 0.5mm, width: 15cm)
+
+
 #set page(fill: gradient.linear(dir: ttb, c1, c2), margin: 1cm)
 #set align(center)
 #set text(font: f1, weight: "extrabold")
@@ -59,10 +62,10 @@
   #v(0.25cm)
   Mit Einführung in Godot #box(image("/web/img/godot.png", height: 1em)) \
   #v(7pt)
-  Alleine oder als Gruppe anmelden \
-  #v(7pt)
+  // Alleine oder als Gruppe anmelden \
+  // #v(7pt)
   Coole Preise!
-  #v(-20pt)
+  // #v(-20pt)
 ]
 
 
@@ -151,18 +154,21 @@
 
 
   #place(
-    dx: 12cm,
-    dy: 10cm,
+    dx: 10cm,
+    dy: 10.2cm,
     stack(
       // TODO icon vertikal zentrieren (px nach unten)
       dir: ltr,
-      spacing: .5em,
       image(height: 2em, "/web/img/logo_only.svg"),
       text(
-        size: 25pt,
+        size: 20pt,
         weight: "bold",
         fill: c4,
-        link("game-jam.open-ost.ch"),
+        place(
+          dx: 0.4em,
+          dy: 1pt,
+          link("game-jam.open-ost.ch"),
+        ),
       ),
     ),
   )
@@ -176,8 +182,9 @@
     fill: c7,
     weight: "bold",
   )[
-    #v(-0.2cm)
+    // #v(-0.2cm)
     Sponsoren
+    // #place(dy: -6.75mm, dx: 4cm, line(c7))
     #v(0.5cm)
   ]
   #image("sponsors/logo_hostpoint.png", width: 30%)
