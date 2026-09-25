@@ -60,7 +60,7 @@
 
 #text(size: 27pt, fill: c7)[
   #v(0.25cm)
-  Mit Einführung in Godot #box(image("/web/img/godot.png", height: 1em))  #h(4pt) und coole Preise!\
+  Einführung in Godot #box(image("/web/img/godot.png", height: 1em))  #h(4pt) und coole Preise!\
   #v(7pt)
   Alleine oder als Gruppe anmelden \
   // #v(7pt)
