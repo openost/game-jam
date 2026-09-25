@@ -87,8 +87,13 @@
   #place(dx: .6cm, image("/web/img/jam.png", height: 10cm))
   #place(dx: 8cm, dy: 5cm, rotate(-10deg, [
     #place(image("/web/img/jam-lid.png", width: 10cm))
-    #place(dx: 3.5cm, dy: 2cm, qrcode("game-jam.open-ost.ch", colors: (c6, c5), quiet-zone: 1, width: 3cm))
-  ])),
+    #place(dx: 3.5cm, dy: 2cm, qrcode(
+      "game-jam.open-ost.ch",
+      colors: (c6, c5),
+      quiet-zone: 1,
+      width: 3cm,
+    ))
+  ]))
 ]
 
 #box(width: 100%, align(left, [
