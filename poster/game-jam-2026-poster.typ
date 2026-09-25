@@ -60,11 +60,11 @@
 
 #text(size: 27pt, fill: c7)[
   #v(0.25cm)
-  Mit Einführung in Godot #box(image("/web/img/godot.png", height: 1em)) \
+  Mit Einführung in Godot #box(image("/web/img/godot.png", height: 1em))  #h(4pt) und coole Preise!\
   #v(7pt)
-  // Alleine oder als Gruppe anmelden \
+  Alleine oder als Gruppe anmelden \
   // #v(7pt)
-  Coole Preise!
+
   // #v(-20pt)
 ]
 
@@ -182,10 +182,10 @@
     fill: c7,
     weight: "bold",
   )[
-    // #v(-0.2cm)
+    #v(0.8mm)
     Sponsoren
     // #place(dy: -6.75mm, dx: 4cm, line(c7))
-    #v(0.5cm)
+    #v(0.65cm)
   ]
   #image("sponsors/logo_hostpoint.png", width: 30%)
 ]))
