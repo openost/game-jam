@@ -44,10 +44,6 @@ jobs:
     env:
       DOCKER_USERNAME: "${{ secrets.DOCKER_USERNAME }}"
       DOCKER_PASSWORD: "${{ secrets.DOCKER_PASSWORD }}"
-    if: github.ref == 'refs/heads/master'
-    needs:
-      - test
-      - lint
     steps:
       - uses: actions/checkout@v7
       - name: Fetch repository tags (for git describe to work)
