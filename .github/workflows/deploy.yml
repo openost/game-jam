@@ -3,6 +3,10 @@ name: Deploy html site to gh pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    # Schedule weekly builds on master, to ensure that the Docker image gets
+    # rebuilt regularly (in order to include security fixes in the base image).
+    - cron: '5 4 * * 5'
 
   workflow_dispatch:
 
@@ -33,3 +37,27 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  publish:
+    name: publish docker image
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_USERNAME: "${{ secrets.DOCKER_USERNAME }}"
+      DOCKER_PASSWORD: "${{ secrets.DOCKER_PASSWORD }}"
+    if: github.ref == 'refs/heads/master'
+    needs:
+      - test
+      - lint
+    steps:
+      - uses: actions/checkout@v7
+      - name: Fetch repository tags (for git describe to work)
+        run: git fetch --prune --unshallow
+      - name: Export env vars
+        run: |
+          export RELEASE=$(git describe --tags)
+          if [ -z "$RELEASE" ]; then echo "Could not determine release name"; exit 1; fi
+          echo "export DOCKER_TAGS='openhsr/gamejam:latest openhsr/gamejam:${RELEASE}'" >> .ci-env
+      - name: Build Docker image
+        run: source .ci-env && bash deploy/ci-build.sh
+      - name: Publish Docker image
+        run: source .ci-env && bash deploy/ci-publish.sh
