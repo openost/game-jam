@@ -1,3 +1,6 @@
 *.ignored
 *.afphoto~lock~
 *Zone.Identifier
+.direnv
+result
+signups/signups.sqlite

@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+import datetime
+import subprocess
+import os
+import sqlite3
+import functools
+
+DB_NAME = 'signups.sqlite'
+
+def umlaut_to_ascii(s):
+    return s.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
+
+def signup():
+    first_name = input('First name: ')
+    last_name = input('Last name: ')
+    email = '{0}.{1}@ost.ch'.format(first_name.lower(), last_name.lower())
+    specific_email = umlaut_to_ascii(input('E-Mail ({0}): '.format(email)))
+    if len(specific_email) > 0:
+        email = specific_email
+
+    teamname = input('Team Name: ')
+    experience = input('Erfahrung: ')
+    allergies = input('Allergien: ')
+
+    today = datetime.date.today()
+
+    conn = sqlite3.connect(DB_NAME)
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+
+    c.execute('''INSERT INTO signups (first_name, last_name, email, since, teamname, experience, allergies)
+              VALUES (?, ?, ?, ?, ?, ?, ?);''', (first_name, last_name, email, today.strftime("%Y-%m-%d"),
+                                                 teamname, experience, allergies))
+    c.execute("SELECT * FROM signups WHERE ROWID = (SELECT MAX(ROWID)  FROM signups);")
+    row = c.fetchone()
+
+    print("Newly added member:")
+    print(functools.reduce(lambda p, n: p + '{0}="{1}" '.format(n[0], n[1]),
+          zip(row.keys(), tuple(row)), ''))
+
+    conn.commit()
+    c.close()
+    print("Member has been added.")
+
+
+def confirm(message):
+    return input(message + ' (y/N)').lower() == 'y'
+
+
+def read_passphrase():
+    return subprocess.run('pass openost/verein/memberdb',
+                          shell=True,
+                          check=True,
+                          stdout=subprocess.PIPE).stdout.decode()[:-1]
+
+
+def main():
+    if os.path.exists(DB_NAME):
+        if confirm('Decrypt DB?'):
+            os.unlink(DB_NAME)
+
+    if not os.path.exists(DB_NAME):
+        passphrase = read_passphrase()
+        subprocess.run('gpg2 --output signups.sqlite --batch '
+                       '--passphrase-fd 0 --decrypt signups.sqlite.gpg',
+                       shell=True,
+                       input=passphrase.encode(),
+                       check=True
+                       )
+
+    while confirm('Add (another) new signup?'):
+        signup()
+
+    if confirm('Encrypt DB?'):
+        passphrase = read_passphrase()
+        os.unlink(DB_NAME + '.gpg')
+        subprocess.run('gpg2 --symmetric --batch --passphrase-fd 0 signups.sqlite',
+                       shell=True,
+                       input=passphrase.encode(),
+                       check=True,
+                       )
+
+
+if __name__ == '__main__':
+    main()
