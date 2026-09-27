@@ -164,7 +164,9 @@ body {
 }
 
 main {
-  background: linear-gradient(0deg, var(--color-orange), var(--color-orange-dark));
+  background: linear-gradient(0deg,
+      var(--color-orange),
+      var(--color-orange-dark));
   min-height: 100vh;
   display: block;
   padding: 3rem 5px;
@@ -247,6 +249,73 @@ h2 {
   padding: 0 20px;
   font-weight: 400;
   text-align: left;
+}
+
+.calendar {
+  width: 100%;
+  display: flex;
+  padding: .25rem;
+  justify-content: space-between;
+  background-color: var(--color-brown);
+}
+
+.calendar .day {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+}
+
+.calendar .day > p {
+  text-align: center;
+  color: var(--color-orange);
+  font-size: 1.5em;
+  margin: 0px;
+}
+
+.calendar .day .schedule {
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.calendar .day.fri .schedule {
+  margin-top: auto;
+}
+
+.calendar .day .schedule div {
+  padding: 0.25rem;
+  background-color: var(--color-orange);
+}
+
+.calendar .day .schedule .hrs-1 {
+  height: 2em;
+}
+
+.calendar .day .schedule .hrs-2 {
+  height: 4em;
+}
+
+.calendar .day .schedule .hrs-3 {
+  height: 6em;
+}
+
+.calendar .day .schedule .hrs-4 {
+  height: 8em;
+}
+
+.calendar .day .schedule .hrs-6 {
+  height: 14em;
+}
+
+.calendar .day .schedule .time {
+  color: var(--color-brown);
+  font-size: 0.75em;
+}
+
+.calendar .day .schedule p {
+  margin: 0px;
 }
 
 .visuals {
@@ -357,6 +426,10 @@ footer {
 
   .title {
     font-size: 12px;
+  }
+
+  .calendar {
+    flex-direction: column;
   }
 
   h2,
