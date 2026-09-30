@@ -254,7 +254,7 @@ h2 {
 .calendar {
   width: 100%;
   display: flex;
-  padding: .25rem;
+  padding: 0.25rem;
   justify-content: space-between;
   background-color: var(--color-brown);
 }
@@ -266,7 +266,7 @@ h2 {
   padding: 0.25rem;
 }
 
-.calendar .day > p {
+.calendar .day>p {
   text-align: center;
   color: var(--color-orange);
   font-size: 1.5em;
@@ -410,11 +410,37 @@ a:active {
   justify-content: center;
 }
 
-footer {
-  padding-bottom: 3rem;
+.sponsors {
+  width: 90%;
+  margin: auto;
+}
+
+.sponsors .imgs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: stretch;
+}
+
+.sponsors .imgs a {
+  max-width: 30%;
+  flex-grow: 1;
+}
+
+.sponsors .imgs a img {
+  width: 100%;
+  margin: auto;
 }
 
 @media (max-width: 600px) {
+  .sponsors .imgs a {
+    max-width: 100%;
+  }
+
   .desktop-only {
     display: none;
   }

@@ -182,7 +182,6 @@
 // */
 
 #box(width: 100%, align(left, [
-  #v(1em)
   #text(
     size: 22pt,
     fill: c7,
@@ -190,12 +189,11 @@
   )[
     Sponsoren
   ]
-  #v(1em)
-  #grid(
-    columns: (1fr,1fr,1fr),
-    align: center + horizon,
-    gutter: 1em,
-    image("../web/img/open-circle-logo.png", width: 15em),
+  #align(left + horizon, stack(
+    dir: ltr,
+    spacing: 2em,
     image("../web/img/hostpoint-logo.png", width: 13em),
-  )
+    image("../web/img/open-circle-logo.svg", width: 15em),
+    image("../web/img/ost-logo.png", width: 10em),
+  ))
 ]))
