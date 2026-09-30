@@ -140,7 +140,12 @@
   #place(dx: 10cm, dy: 25mm, rotate(10deg, [
     #place(image("/poster/export/game-jam-2026-pixel-lid.gif", width: 32mm * 3))
     // #place(image("/web/img/jam-lid.png", width: 9cm))
-    #place(dx: 3.2cm, dy: 1.6cm, qrcode("game-jam.open-ost.ch", colors: (c6, c5), quiet-zone: 1, width: 3cm))
+    #place(dx: 3.2cm, dy: 1.6cm, qrcode(
+      "game-jam.open-ost.ch",
+      colors: (c6, c5),
+      quiet-zone: 1,
+      width: 3cm,
+    ))
   ]))
 
   // lid art pixels
@@ -177,15 +182,20 @@
 // */
 
 #box(width: 100%, align(left, [
+  #v(1em)
   #text(
     size: 22pt,
     fill: c7,
     weight: "bold",
   )[
-    #v(0.8mm)
     Sponsoren
-    // #place(dy: -6.75mm, dx: 4cm, line(c7))
-    #v(0.65cm)
   ]
-  #image("sponsors/logo_hostpoint.png", width: 30%)
+  #v(1em)
+  #grid(
+    columns: (1fr,1fr,1fr),
+    align: center + horizon,
+    gutter: 1em,
+    image("../web/img/open-circle-logo.png", width: 15em),
+    image("../web/img/hostpoint-logo.png", width: 13em),
+  )
 ]))
