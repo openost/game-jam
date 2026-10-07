@@ -60,67 +60,14 @@
 
 #text(size: 27pt, fill: c7)[
   #v(0.25cm)
-  Einführung in Godot #box(image("/web/img/godot.png", height: 1em))  #h(4pt) und coole Preise!\
+  Einführung in Godot #box(image("/web/img/godot.png", height: 1em)) #h(4pt) und
+  coole Preise!\
   #v(7pt)
   Alleine oder als Gruppe anmelden \
-  // #v(7pt)
-
-  // #v(-20pt)
 ]
-
-
-// kleiner:
-/*
-#box(width: 100%, height: 11.2cm)[
-
-  // jam art pixels
-  #place(dx: 0cm, dy: 4.25cm, box[
-    #place(dx: 1.5cm, dy: -4.2cm, bxs(c4))
-    #place(dx: 3.6cm, dy: -3.8cm, bxs(c4))
-    #place(dx: 1.6cm, dy: -1.8cm, bxs(c4))
-    #place(dx: 2.2cm, dy: -3.2cm, bxb(c4))
-  ])
-
-  #place(dx: 3cm, dy: 1cm, image("/poster/export/game-jam-2026-pixel-jar.gif", height: 8cm))
-  #place(dx: 7.75cm, dy: 6.5cm, rotate(-7deg, [
-    #place(image("/poster/export/game-jam-2026-pixel-lid.gif", width: 8cm))
-    // #place(image("/web/img/jam-lid.png", width: 9cm))
-    #place(dx: 2.9cm, dy: 1.5cm, qrcode("game-jam.open-ost.ch", colors: (c6, c5), quiet-zone: 1, width: 3cm))
-  ]))
-
-  // lid art pixels
-  #place(dy: 5cm, dx: -1cm, box[
-    #place(dx: 15cm, dy: -.2cm, bxs(c4))
-    #place(dx: 18.2cm, dy: -1.2cm, bxb(c4))
-    #place(dx: 16.6cm, dy: -.4cm, bxs(c4))
-    #place(dx: 17cm, dy: .6cm, bxb(c4))
-    #place(dx: 18.4cm, dy: 1.2cm, bxs(c4))
-  ])
-
-
-  #place(
-    dx: 9cm,
-    dy: 14cm,
-    stack(
-      // TODO icon vertikal zentrieren (px nach unten)
-      dir: ltr,
-      spacing: .5em,
-      image(height: 2em, "/web/img/logo_only.svg"),
-      text(
-        size: 25pt,
-        weight: "bold",
-        fill: c4,
-        link("game-jam.open-ost.ch"),
-      ),
-    ),
-  )
-
-]
-// */
-
-// grösser:
-// /*
-#box(width: 100%, height: 11.2cm)[
+#v(-1em)
+// ik this is pretty scuffed
+#scale(90%,box(width: 100%, height: 10cm)[
 
   // jam art pixels
   #place(dx: -0.5cm, dy: 4cm, box[
@@ -178,9 +125,7 @@
     ),
   )
 
-]
-// */
-
+])
 #box(width: 100%, align(left, [
   #text(
     size: 22pt,
@@ -189,11 +134,21 @@
   )[
     Sponsoren
   ]
-  #align(left + horizon, stack(
-    dir: ltr,
-    spacing: 2em,
-    image("../web/img/hostpoint-logo.png", width: 13em),
-    image("../web/img/open-circle-logo.svg", width: 15em),
-    image("../web/img/ost-logo.png", width: 10em),
+  #align(center + horizon, stack(
+    dir: ttb,
+    stack(
+      dir: ltr,
+      spacing: 2em,
+      image("../web/img/hostpoint-logo.png", height: 2.5em),
+      image("../web/img/open-circle-logo.svg", height: 2.25em),
+      // image("../web/img/nine-logo.svg", height: 4em),
+      image("../web/img/ost-logo.png", height: 6em),
+    ),
+    v(-2em),
+    stack(
+      dir: ltr,
+      spacing: 2em,
+      // image("../web/img/ost-logo.png", height: 6em),
+    ),
   ))
 ]))
