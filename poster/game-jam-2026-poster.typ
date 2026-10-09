@@ -139,16 +139,17 @@
     stack(
       dir: ltr,
       spacing: 2em,
-      image("../web/img/hostpoint-logo.png", height: 2.5em),
-      image("../web/img/open-circle-logo.svg", height: 2.25em),
-      // image("../web/img/nine-logo.svg", height: 4em),
-      image("../web/img/ost-logo.png", height: 6em),
+      image("../web/img/hostpoint-logo.png", height: 2.6em),
+      image("../web/img/impulsort-logo.png", height: 3em),
+      image("../web/img/open-circle-logo.svg", height: 2em),
     ),
-    v(-2em),
+    v(1em),
     stack(
       dir: ltr,
       spacing: 2em,
-      // image("../web/img/ost-logo.png", height: 6em),
+      image("../web/img/sdj-logo.png", height: 3.5em),
+      image("../web/img/nine-logo.svg", height: 3.5em),
+      image("../web/img/ost-logo.svg", height: 4em),
     ),
   ))
 ]))
