@@ -148,7 +148,7 @@
       dir: ltr,
       spacing: 2em,
       image("../web/img/sdj-logo.png", height: 3.5em),
-      image("../web/img/nine-logo.svg", height: 3.5em),
+      image("../web/img/nine-logo.svg", height: 6em),
       image("../web/img/ost-logo.svg", height: 4em),
     ),
   ))
