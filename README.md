@@ -10,6 +10,7 @@ typst commands
 ```shell
 typst watch poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root .
 typst compile poster/poster.typ --font-path=web/fonts/ --root .
+typst watch poster/screen-ost/default.typ --root . --font-path=web/fonts --format png --input format=display poster/screen-ost/{p}.png
 ```
 
 Used fonts in /web/fonts
