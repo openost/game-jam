@@ -1,199 +1,247 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Open Game Jam</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Der Open Game Jam der open\OST im November 2026!"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/jam.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/jam.png" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="180x180"
+      href="img/jam.png"
+    />
+    <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
+    <meta name="theme-color" content="#f9b26f" />
+    <meta property="og:title" content="Open Game Jam" />
+    <meta
+      property="og:description"
+      content="Der Open Game Jam der open\OST im November 2026! Game Jam in Rapperswil, Schweiz an der Ostschweizer Fachhochschule. "
+    />
+    <meta property="og:image" content="img/jam.png" />
+    <meta
+      name="twitter:card"
+      content="Der Open Game Jam der open\OST im November 2026!"
+    />
+    <meta name="twitter:site" content="https://game-jam.open-ost.ch" />
+    <meta name="twitter:title" content="Open Game Jam" />
+    <meta
+      name="twitter:description"
+      content="Der Open Game Jam der open\OST im November 2026!"
+    />
+    <meta name="twitter:image" content="img/jam.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Open Game Jam</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Der Open Game Jam der open\OST im November 2026!" />
-  <link rel="icon" type="image/png" sizes="32x32" href="img/jam.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="img/jam.png" />
-  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="img/jam.png" />
-  <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
-  <meta name="theme-color" content="#f9b26f" />
-  <meta property="og:title" content="Open Game Jam" />
-  <meta property="og:description" content="Der Open Game Jam der open\OST im November 2026!" />
-  <meta property="og:image" content="img/jam.png" />
-  <meta name="twitter:card" content="Der Open Game Jam der open\OST im November 2026!" />
-  <meta name="twitter:site" content="https://game-jam.open-ost.ch" />
-  <meta name="twitter:title" content="Open Game Jam" />
-  <meta name="twitter:description" content="Der Open Game Jam der open\OST im November 2026!" />
-  <meta name="twitter:image" content="img/jam.png" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="style.css" />
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/gh/altcha-org/altcha/dist/main/altcha.min.js"
+      type="module"
+    ></script>
+    <script async defer src="app.js"></script>
+  </head>
 
-  <script async defer src="https://cdn.jsdelivr.net/gh/altcha-org/altcha/dist/main/altcha.min.js"
-    type="module"></script>
-  <script async defer src="app.js"></script>
-</head>
-
-<body>
-  <main>
-    <section>
-      <h1 class="title">
-        <p id="open">OPEN</p>
-        <p id="game-jam">GAME JAM</p>
-      </h1>
-      <div class="subtitle">
-        <p class="date h2">20.–22. November 2026</p>
-        <p class="place h2">OST Rapperswil</p>
-        <p class="desc">
-          Mit Einführung in Godot
-          <img src="img/godot.png" />
-          <br />
-          Alleine oder als Gruppe anmelden
-          <br />
-          Coole Preise!
-        </p>
-      </div>
-      <div>
-        <div class="visuals">
-          <img class="img-jam" src="img/jam.png" />
-          <img class="img-lid" src="img/jam-lid.png" />
-          <div class="email">
+  <body>
+    <main>
+      <section>
+        <h1 class="title">
+          <p id="open">OPEN</p>
+          <p id="game-jam">GAME JAM</p>
+        </h1>
+        <div class="subtitle">
+          <p class="date h2">20.–22. November 2026</p>
+          <p class="place h2">OST Rapperswil</p>
+          <p class="desc">
+            Mit Einführung in Godot
+            <img src="img/godot.png" />
+            <br />
+            Alleine oder als Gruppe anmelden
+            <br />
+            Coole Preise!
+          </p>
+        </div>
+        <div>
+          <div class="visuals">
+            <img class="img-jam" src="img/jam.png" />
+            <img class="img-lid" src="img/jam-lid.png" />
+            <div class="email">
+              <a
+                href="mailto:info@open-ost.ch?subject=Game%20Jam%20Anmeldung&body=Hallo%20zusammen!%0A%0AIch%20w%C3%BCrde%20gerne%20am%20Game%20Jam%20teilnehmen%20%3A)%0AName%3A%20%0AVorname%3A%0AAllergien%2FErn%C3%A4hrungsvorlieben%3A%0A%0A(Optional)%0ATeamname%3A%0ATeammitglieder%3A%0A%0AIch%20habe%20schon%20Erfahrung%20in%20der%20Game-Entwicklung%20mit%3A%0A-%20%5B%20%5D%20Godot%0A-%20%5B%20%5D%20Unity%0A-%20%5B%20%5D%20Keine%20%0A-%20%5B%20%5D%20Weiteres...%0A%0ALiebe%20Gr%C3%BCsse"
+              >
+                Hier Anmelden!
+              </a>
+              <p>Anmeldeschluss am 13.11.26</p>
+            </div>
+          </div>
+          <div class="sponsors"></div>
+        </div>
+      </section>
+      <section>
+        <h2>Was?</h2>
+        <div class="content">
+          <p class="">
+            Ein Game Jam ist ein Zusammentreffen von Personen, um gemeinsam
+            innerhalb einer kurzen Zeitspanne ein Spiel zu entwickeln. Dabei
+            arbeiten Personen mit verschiedenen Kenntnissen interdisziplinär
+            zusammen.
+          </p>
+          <a
+            href="https://de.wikipedia.org/wiki/Game_Jam"
+            target="_blank"
+            title="Game Jam auf Wikipedia"
+            >Wikipedia-Artikel zu Game Jam</a
+          >
+          <p>
+            Dieses Mal geht es um das Thema <strong>open</strong>, du bist frei
+            was du damit verbindest.
+            <br />
+            Ein paar Beispiele: ein offenes Konfitürenglas, eine offene Tür oder
+            etwas was Open Source ist.
+          </p>
+          <p>
+            Organisiert vom Verein an der OST Rapperswil, Schweiz.
             <a
-              href="mailto:info@open-ost.ch?subject=Game%20Jam%20Anmeldung&body=Hallo%20zusammen!%0A%0AIch%20w%C3%BCrde%20gerne%20am%20Game%20Jam%20teilnehmen%20%3A)%0AName%3A%20%0AVorname%3A%0AAllergien%2FErn%C3%A4hrungsvorlieben%3A%0A%0A(Optional)%0ATeamname%3A%0ATeammitglieder%3A%0A%0AIch%20habe%20schon%20Erfahrung%20in%20der%20Game-Entwicklung%20mit%3A%0A-%20%5B%20%5D%20Godot%0A-%20%5B%20%5D%20Unity%0A-%20%5B%20%5D%20Keine%20%0A-%20%5B%20%5D%20Weiteres...%0A%0ALiebe%20Gr%C3%BCsse">
-              Hier Anmelden!
-            </a>
-            <p>Anmeldeschluss am 13.11.26</p>
-          </div>
-        </div>
-        <div class="sponsors"></div>
-      </div>
-    </section>
-    <section>
-      <h2>Was?</h2>
-      <div class="content">
-        <p class="">
-          Ein Game Jam ist ein Zusammentreffen von Personen, um gemeinsam
-          innerhalb einer kurzen Zeitspanne ein Spiel zu entwickeln. Dabei
-          arbeiten Personen mit verschiedenen Kenntnissen interdisziplinär
-          zusammen.
-        </p>
-        <a href="https://de.wikipedia.org/wiki/Game_Jam" target="_blank"
-          title="Game Jam auf Wikipedia">Wikipedia-Artikel zu Game Jam</a>
-        <p>
-          Dieses Mal geht es um das Thema <strong>open</strong>, du bist frei
-          was du damit verbindest.
-          <br />
-          Ein paar Beispiele: ein offenes Konfitürenglas, eine offene Tür oder
-          etwas was Open Source ist.
-        </p>
-        <p>
-          Organisiert vom Verein
-          <a href="https://www.open-ost.ch/events/game-jam/" target="_blank"
-            title="Der Game Jam auf der Open Ost Website"><strong>open\OST</strong></a>
-        </p>
-        <p>
-          Fragen? Du kannst du uns auf
-          <a href="https://matrix.to/#/#game-jam:open-ost.ch" title="Matrix link">Matrix</a>
-          oder
-          <a href="https://discord.gg/ck3jGP3sc" title="Discord link">Discord</a>
-          kontaktieren.
-        </p>
-        <div class="calendar">
-          <div class="day fri">
-            <p>Freitag</p>
-            <div class="schedule">
-              <div class="hrs-1">
-                <p class="time">15:00 - 16:00</p>
-                <p class="event">Intro + Einführung in Godot</p>
-              </div>
-              <div class="hrs-3">
-                <p class="time">16:00 - 19:00</p>
-                <p class="event">Planung / Hacking</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">19:00 - 20:00</p>
-                <p class="event">Znacht</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">20:00 - Open End</p>
-                <p class="event">Hacking</p>
+              href="https://www.open-ost.ch/events/game-jam/"
+              target="_blank"
+              title="Der Game Jam auf der Open Ost Website"
+              ><strong>open\OST</strong></a
+            >
+          </p>
+          <p>
+            Fragen? Du kannst du uns auf
+            <a
+              href="https://matrix.to/#/#game-jam:open-ost.ch"
+              title="Matrix link"
+              >Matrix</a
+            >
+            oder
+            <a href="https://discord.gg/ck3jGP3sc" title="Discord link"
+              >Discord</a
+            >
+            kontaktieren.
+          </p>
+          <div class="calendar">
+            <div class="day fri">
+              <p>Freitag</p>
+              <div class="schedule">
+                <div class="hrs-1">
+                  <p class="time">15:00 - 16:00</p>
+                  <p class="event">Intro + Einführung in Godot</p>
+                </div>
+                <div class="hrs-3">
+                  <p class="time">16:00 - 19:00</p>
+                  <p class="event">Planung / Hacking</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">19:00 - 20:00</p>
+                  <p class="event">Znacht</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">20:00 - Open End</p>
+                  <p class="event">Hacking</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="day sat">
-            <p>Samstag</p>
-            <div class="schedule">
-              <div class="hrs-1">
-                <p class="time">08:00 - 09:00</p>
-                <p class="event">Zmorge</p>
-              </div>
-              <div class="hrs-3">
-                <p class="time">09:00 - 12:00</p>
-                <p class="event">Hacking</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">12:00 - 13:00</p>
-                <p class="event">Zmittag</p>
-              </div>
-              <div class="hrs-6">
-                <p class="time">13:00 - 19:00</p>
-                <p class="event">Hacking</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">19:00 - 20:00</p>
-                <p class="event">Znacht</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">20:00 - Open End</p>
-                <p class="event">Hacking</p>
+            <div class="day sat">
+              <p>Samstag</p>
+              <div class="schedule">
+                <div class="hrs-1">
+                  <p class="time">08:00 - 09:00</p>
+                  <p class="event">Zmorge</p>
+                </div>
+                <div class="hrs-3">
+                  <p class="time">09:00 - 12:00</p>
+                  <p class="event">Hacking</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">12:00 - 13:00</p>
+                  <p class="event">Zmittag</p>
+                </div>
+                <div class="hrs-6">
+                  <p class="time">13:00 - 19:00</p>
+                  <p class="event">Hacking</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">19:00 - 20:00</p>
+                  <p class="event">Znacht</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">20:00 - Open End</p>
+                  <p class="event">Hacking</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="day sun">
-            <p>Sonntag</p>
-            <div class="schedule">
-              <div class="hrs-1">
-                <p class="time">08:00 - 09:00</p>
-                <p class="event">Zmorge</p>
-              </div>
-              <div class="hrs-3">
-                <p class="time">09:00 - 12:00</p>
-                <p class="event">Hacking</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">12:00 - 13:00</p>
-                <p class="event">Zmittag</p>
-              </div>
-              <div class="hrs-2">
-                <p class="time">13:00 - 15:00</p>
-                <p class="event">Hacking</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">15:00 - 16:00</p>
-                <p class="event">Upload itch.io</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">16:00 - 17:00</p>
-                <p class="event">Playtesting</p>
-              </div>
-              <div class="hrs-1">
-                <p class="time">17:00 - 18:00</p>
-                <p class="event">Voting + Preisverleih</p>
+            <div class="day sun">
+              <p>Sonntag</p>
+              <div class="schedule">
+                <div class="hrs-1">
+                  <p class="time">08:00 - 09:00</p>
+                  <p class="event">Zmorge</p>
+                </div>
+                <div class="hrs-3">
+                  <p class="time">09:00 - 12:00</p>
+                  <p class="event">Hacking</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">12:00 - 13:00</p>
+                  <p class="event">Zmittag</p>
+                </div>
+                <div class="hrs-2">
+                  <p class="time">13:00 - 15:00</p>
+                  <p class="event">Hacking</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">15:00 - 16:00</p>
+                  <p class="event">Upload itch.io</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">16:00 - 17:00</p>
+                  <p class="event">Playtesting</p>
+                </div>
+                <div class="hrs-1">
+                  <p class="time">17:00 - 18:00</p>
+                  <p class="event">Voting + Preisverleih</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="desktop-only">
-      <h2>Unser kleines Game zum Game Jam</h2>
-      <!-- Alle Dateien finden sich im "game" Ordner, aber zur Einfachheit habe ich die itch.io Version eingebettet. -->
-      <div class="game">
-        <iframe frameborder="0" src="https://itch.io/embed-upload/19370805?color=f89e71" allowfullscreen="" width="1152"
-          height="668"><a href="https://jasmin-f.itch.io/jam-overflow">Jam Overflow</a></iframe>
-      </div>
-    </section>
-    <section>
-      <h2>Inspiration</h2>
-      <p class="desc">
-        Wir haben ein paar Youtube Videos für dich herausgesucht.
-      </p>
-      <div class="videos">
-        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/XQ_LpQzbsok?si=fQizAuduOY3npKz_"
-          title="YouTube video player : Beispiel Game" frameborder="0" allow="
+      </section>
+      <section class="desktop-only">
+        <h2>Unser kleines Game zum Game Jam</h2>
+        <!-- Alle Dateien finden sich im "game" Ordner, aber zur Einfachheit habe ich die itch.io Version eingebettet. -->
+        <div class="game">
+          <iframe
+            frameborder="0"
+            src="https://itch.io/embed-upload/19370805?color=f89e71"
+            allowfullscreen=""
+            width="1152"
+            height="668"
+            ><a href="https://jasmin-f.itch.io/jam-overflow"
+              >Jam Overflow</a
+            ></iframe
+          >
+        </div>
+      </section>
+      <section>
+        <h2>Inspiration</h2>
+        <p class="desc">
+          Wir haben ein paar Youtube Videos für dich herausgesucht.
+        </p>
+        <div class="videos">
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube-nocookie.com/embed/XQ_LpQzbsok?si=fQizAuduOY3npKz_"
+            title="YouTube video player : Beispiel Game"
+            frameborder="0"
+            allow="
               accelerometer;
               autoplay;
               clipboard-write;
@@ -201,9 +249,17 @@
               gyroscope;
               picture-in-picture;
               web-share;
-            " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/thgdTkxeNJY?si=HwuByLpOXrud2Wzq"
-          title="YouTube video player : schnellstes Game" frameborder="0" allow="
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="400"
+            height="250"
+            src="https://www.youtube-nocookie.com/embed/thgdTkxeNJY?si=HwuByLpOXrud2Wzq"
+            title="YouTube video player : schnellstes Game"
+            frameborder="0"
+            allow="
               accelerometer;
               autoplay;
               clipboard-write;
@@ -211,22 +267,42 @@
               gyroscope;
               picture-in-picture;
               web-share;
-            " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
-    <section class="sponsors">
-      <h2>Unsere Sponsoren</h2>
-      <div class="imgs">
-        <a href="https://www.hostpoint.ch/" target="_blank" title="Hostpoint"><img src="img/hostpoint-logo.png" alt="Logo Hostpoint" /></a>
-        <a href="https://www.impulsort.ch/" target="_blank" title="Impulsort"><img src="img/impulsort-logo.png" alt="Logo Impulsort" /></a>
-        <a href="https://www.open-circle.ch/" target="_blank" title="Open Circle"><img src="img/open-circle-logo.svg" alt="Logo Open Circle" /></a>
-        <a href="https://swissdevjobs.ch/jobs/GameDev/all" target="_blank" title="SwissDevJobs"><img src="img/sdj-logo.png" alt="Logo SwissDevJobs" /></a>
-        <a href="https://www.nine.ch" target="_blank" title="Nine"><img src="img/nine-logo.svg" alt="Logo Nine" /></a>
-        <a href="https://www.ost.ch/" target="_blank" title="OST"><img src="img/ost-logo.svg" alt="Logo OST" /></a>
-      </div>
-    </section>
-  </main>
-</body>
-
+      <section class="sponsors">
+        <h2>Unsere Sponsoren</h2>
+        <div class="imgs">
+          <a href="https://www.hostpoint.ch/" target="_blank" title="Hostpoint"
+            ><img src="img/hostpoint-logo.png" alt="Logo Hostpoint"
+          /></a>
+          <a href="https://www.impulsort.ch/" target="_blank" title="Impulsort"
+            ><img src="img/impulsort-logo.png" alt="Logo Impulsort"
+          /></a>
+          <a
+            href="https://www.open-circle.ch/"
+            target="_blank"
+            title="Open Circle"
+            ><img src="img/open-circle-logo.svg" alt="Logo Open Circle"
+          /></a>
+          <a
+            href="https://swissdevjobs.ch/jobs/GameDev/all"
+            target="_blank"
+            title="SwissDevJobs"
+            ><img src="img/sdj-logo.png" alt="Logo SwissDevJobs"
+          /></a>
+          <a href="https://www.nine.ch" target="_blank" title="Nine"
+            ><img src="img/nine-logo.svg" alt="Logo Nine"
+          /></a>
+          <a href="https://www.ost.ch/" target="_blank" title="OST"
+            ><img src="img/ost-logo.svg" alt="Logo OST"
+          /></a>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
