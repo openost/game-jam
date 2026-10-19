@@ -133,7 +133,7 @@
     weight: "bold",
   )[
     #v(0.1em)
-    Sponsoren
+    #h(1.2em)Sponsoren
     #v(0.5em)
   ]
   #align(center + horizon, stack(
