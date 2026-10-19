@@ -67,7 +67,7 @@
 ]
 #v(-1em)
 // ik this is pretty scuffed
-#scale(90%,box(width: 100%, height: 10cm)[
+#scale(90%, box(width: 100%, height: 10cm)[
 
   // jam art pixels
   #place(dx: -0.5cm, dy: 4cm, box[
@@ -106,7 +106,7 @@
 
 
   #place(
-    dx: 10cm,
+    dx: 10.2cm,
     dy: 10.2cm,
     stack(
       // TODO icon vertikal zentrieren (px nach unten)
@@ -128,28 +128,30 @@
 ])
 #box(width: 100%, align(left, [
   #text(
-    size: 22pt,
+    size: 20pt,
     fill: c7,
     weight: "bold",
   )[
+    #v(0.1em)
     Sponsoren
+    #v(0.5em)
   ]
   #align(center + horizon, stack(
     dir: ttb,
     stack(
       dir: ltr,
-      spacing: 2em,
-      image("../web/img/hostpoint-logo.png", height: 2.6em),
-      image("../web/img/impulsort-logo.png", height: 3em),
-      image("../web/img/open-circle-logo.svg", height: 2em),
+      spacing: 4em,
+      image("../web/img/hostpoint-logo.png", height: 2.6em - 0.3em),
+      image("../web/img/impulsort-logo.png", height: 3em - 0.3em),
+      image("../web/img/open-circle-logo.svg", height: 2em - 0.3em),
     ),
-    v(1em),
+    v(0.8em),
     stack(
       dir: ltr,
-      spacing: 2em,
-      image("../web/img/sdj-logo.png", height: 3.5em),
-      image("../web/img/nine-logo.svg", height: 6em),
-      image("../web/img/ost-logo.svg", height: 4em),
+      spacing: 4em,
+      image("../web/img/sdj-logo.png", height: 3.7em - 0.3em),
+      image("../web/img/nine-logo.svg", height: 6em - 0.3em),
+      image("../web/img/ost-logo.svg", height: 4em - 0.3em),
     ),
   ))
 ]))
