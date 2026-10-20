@@ -81,11 +81,19 @@
   #place(
     dx: 2cm,
     dy: 1cm,
-    image("/poster/export/game-jam-2026-pixel-jar.gif", width: 28mm * 3),
+    image(
+      "/poster/export/game-jam-2026-pixel-jar.gif",
+      width: 28mm * 3,
+      scaling: "pixelated",
+    ),
   )
 
   #place(dx: 10cm, dy: 25mm, rotate(10deg, [
-    #place(image("/poster/export/game-jam-2026-pixel-lid.gif", width: 32mm * 3))
+    #place(image(
+      "/poster/export/game-jam-2026-pixel-lid.gif",
+      width: 32mm * 3,
+      scaling: "pixelated",
+    ))
     // #place(image("/web/img/jam-lid.png", width: 9cm))
     #place(dx: 3.2cm, dy: 1.6cm, qrcode(
       "game-jam.open-ost.ch",
