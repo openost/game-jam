@@ -13,12 +13,16 @@ Zur einfachen Benutzung (entschlüsseln, Teilnehmer hinzufügen und verschlüsse
 ```bash
 # Entschlüsseln
 gpg2 --output signups.sqlite --decrypt signups.sqlite.gpg
+# Direkt mit pass
+gpg2 --passphrase "$(pass openost/verein/memberdb)" --pinentry-mode loopback -o signups.sqlite -d signups.sqlite.gpg
 
 # Bearbeiten
 sqlite signups.sqlite
 
 # Verschlüsseln
 gpg2 --symmetric signups.sqlite
+# Direkt mit pass
+gpg2 --passphrase "$(pass openost/verein/memberdb)" --pinentry-mode loopback --symmetric signups.sqlite
 ```
 
 ```sql
