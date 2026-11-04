@@ -149,17 +149,18 @@
     stack(
       dir: ltr,
       spacing: 4em,
-      image("../web/img/hostpoint-logo.png", height: 2.6em - 0.3em),
-      image("../web/img/impulsort-logo.png", height: 3em - 0.3em),
-      image("../web/img/open-circle-logo.svg", height: 2em - 0.3em),
+      image("../web/img/hostpoint-logo.png", height: 2.3em),
+      image("../web/img/impulsort-logo.png", height: 2.7em),
+      image("../web/img/open-circle-logo.svg", height: 1.7em),
     ),
     v(0.8em),
     stack(
       dir: ltr,
       spacing: 4em,
-      image("../web/img/sdj-logo.png", height: 3.7em - 0.3em),
-      image("../web/img/nine-logo.svg", height: 6em - 0.3em),
-      image("../web/img/ost-logo.svg", height: 4em - 0.3em),
+      image("../web/img/sdj-logo.png", height: 3.4em),
+      image("../web/img/nine-logo.svg", height: 5.7em),
+      image("../web/img/ost-logo.svg", height: 3.7em),
+      image("../web/img/egswiss-logo.png", height: 4em),
     ),
   ))
 ]))
