@@ -1,64 +1,22 @@
+#import "/lib.typ": *
 #import "@preview/codetastic:0.2.2": qrcode
 
-#let c1 = rgb("#f9b26f")
-#let c2 = rgb("#f37947")
-#let c3 = rgb("#943066")
-#let c4 = rgb("#6f3129")
-#let c7 = rgb("#a2482f")
-#let c5 = rgb("#000000")
-#let c6 = rgb("#E5E3E2")
+#let cs = colors.game-jam
 
-#let f1 = "Roboto"
-#let f2 = "SquareFont Outline"
-#let f3 = "SquareFont"
-
-#let bx(c, s: 1.2em) = box(fill: c, stroke: c, height: s, width: s)
-#let bxb = bx.with(s: 1.8em)
-#let bxs = bx.with(s: 1em)
-
-#let line(c) = box(fill: c, stroke: c, height: 0.5mm, width: 15cm)
-
-
-#set page(fill: gradient.linear(dir: ttb, c1, c2), margin: 1cm)
+#set page(fill: game-jam-bg, margin: 1cm)
 #set align(center)
-#set text(font: f1, weight: "extrabold")
+#set text(font: fonts.game-jam.primary, weight: "extrabold")
 
-#set par(leading: 2em)
-
-#text(size: 8em, font: f2, fill: c3)[
-  OPEN
-] \
-#text(size: 10em, font: f3, fill: c3)[
-  GAME JAM
-]
+#game-jam-title(5.75cm)
 
 #set par(leading: .5em, spacing: .5em)
 
-// GAME pixels
-#place(dx: -1.6cm, dy: -0.6cm, box[
-  #place(dx: 1.5cm, dy: -4.5cm, bx(c3))
-  #place(dx: 2.6cm, dy: -4cm, bx(c3))
-  #place(dx: 3.4cm, dy: -3.2cm, bx(c3))
-  #place(dx: 2.1cm, dy: -2cm, bx(c3))
-  #place(dx: 1.8cm, dy: -2.8cm, bx(c3))
-])
-
-// JAM pixels
-#place(dx: 1.6cm, box[
-  #place(dx: 16.1cm, dy: -1cm, bx(c3))
-  #place(dx: 18cm, dy: -0.6cm, bx(c3))
-  #place(dx: 17cm, dy: 0cm, bx(c3))
-  #place(dx: 15.6cm, dy: .4cm, bx(c3))
-  #place(dx: 17.6cm, dy: 1cm, bx(c3))
-])
-
-#text(size: 3.5em, fill: c4)[
-  #v(0.55cm)
+#text(size: 3.5em, fill: cs.neutral-dark)[
   20.–22. November 2026 \
   #text(size: .75em)[OST Rapperswil]
 ]
 
-#text(size: 27pt, fill: c7)[
+#text(size: 27pt, fill: cs.neutral-light)[
   #v(0.25cm)
   Einführung in Godot #box(image("/web/img/godot.png", height: 1em)) #h(4pt) und
   coole Preise!\
@@ -66,70 +24,17 @@
   Alleine oder als Gruppe anmelden \
 ]
 #v(-1em)
-// ik this is pretty scuffed
-#scale(90%, box(width: 100%, height: 10cm)[
 
-  // jam art pixels
-  #place(dx: -0.5cm, dy: 4cm, box[
-    #place(dx: 1.5cm, dy: -4.2cm, bxs(c4))
-    #place(dx: 3.6cm, dy: -3.8cm, bxs(c4))
-    #place(dx: 1.6cm, dy: -1.8cm, bxs(c4))
-    #place(dx: 2.2cm, dy: -3.2cm, bxb(c4))
-  ])
+#game-jam-logo(
+  10cm,
+  qr: true,
+  url: true,
+)
 
-
-  #place(
-    dx: 2cm,
-    dy: 1cm,
-    image("/poster/export/game-jam-2026-pixel-jar.gif", width: 28mm * 3),
-  )
-
-  #place(dx: 10cm, dy: 25mm, rotate(10deg, [
-    #place(image("/poster/export/game-jam-2026-pixel-lid.gif", width: 32mm * 3))
-    // #place(image("/web/img/jam-lid.png", width: 9cm))
-    #place(dx: 3.2cm, dy: 1.6cm, qrcode(
-      "game-jam.open-ost.ch",
-      colors: (c6, c5),
-      quiet-zone: 1,
-      width: 3cm,
-    ))
-  ]))
-
-  // lid art pixels
-  #place(dy: 2.9cm, dx: 0cm, box[
-    #place(dx: 15cm, dy: -.2cm, bxs(c4))
-    #place(dx: 18.2cm, dy: -1.2cm, bxb(c4))
-    #place(dx: 16.6cm, dy: -.4cm, bxs(c4))
-    #place(dx: 17cm, dy: .6cm, bxb(c4))
-    #place(dx: 18.4cm, dy: 1.2cm, bxs(c4))
-  ])
-
-
-  #place(
-    dx: 10.2cm,
-    dy: 10.2cm,
-    stack(
-      // TODO icon vertikal zentrieren (px nach unten)
-      dir: ltr,
-      image(height: 2em, "/web/img/logo_only.svg"),
-      text(
-        size: 20pt,
-        weight: "bold",
-        fill: c4,
-        place(
-          dx: 0.4em,
-          dy: 1pt,
-          link("game-jam.open-ost.ch"),
-        ),
-      ),
-    ),
-  )
-
-])
 #box(width: 100%, align(left, [
   #text(
     size: 20pt,
-    fill: c7,
+    fill: cs.neutral-light,
     weight: "bold",
   )[
     #v(0.1em)
@@ -141,17 +46,17 @@
     stack(
       dir: ltr,
       spacing: 4em,
-      image("../web/img/hostpoint-logo.png", height: 2.6em - 0.3em),
-      image("../web/img/impulsort-logo.png", height: 3em - 0.3em),
-      image("../web/img/open-circle-logo.svg", height: 2em - 0.3em),
+      image("/web/img/hostpoint-logo.png", height: 2.6em - 0.3em),
+      image("/web/img/impulsort-logo.png", height: 3em - 0.3em),
+      image("/web/img/open-circle-logo.svg", height: 2em - 0.3em),
     ),
     v(0.8em),
     stack(
       dir: ltr,
       spacing: 4em,
-      image("../web/img/sdj-logo.png", height: 3.7em - 0.3em),
-      image("../web/img/nine-logo.svg", height: 6em - 0.3em),
-      image("../web/img/ost-logo.svg", height: 4em - 0.3em),
+      image("/web/img/sdj-logo.png", height: 3.7em - 0.3em),
+      image("/web/img/nine-logo.svg", height: 6em - 0.3em),
+      image("/web/img/ost-logo.svg", height: 4em - 0.3em),
     ),
   ))
 ]))
