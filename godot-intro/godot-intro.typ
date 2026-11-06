@@ -1,26 +1,18 @@
 #import "@preview/touying:0.8.0": *
-// https://touying-typ.github.io/docs/tutorials/build-your-own-theme
+#import "/lib.typ": *
 
-#import "theme/fruchtig.typ": *
-#show: fruchtig-theme.with(
-  aspect-ratio: "16-9",
-  config-info(
-    title: "Godot Einführung für die Game Jam 2026",
-    author: "Jasmin",
-    // logo: [#image("./assets/logo.png")],
-  ),
-  header: (
-    self => utils.display-current-heading(
-      setting: utils.fit-to-width.with(grow: false, 100%),
-      depth: self.slide-level,
-    )
-  ),
+#show: game-jam-theme.with(
+  title: "Godot Einführung",
+  subtitle: image("/web/img/godot.png", height: 2em),
+  authors: ("Jasmin",),
 )
 
+#title-slide()
 
 = Godot Einführung
 
 == Ablauf
+
 - Was ist Godot?
 - Setup
 - Godot Demo
@@ -39,7 +31,9 @@
 
 "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
 
-== Setup
+= Setup
+
+== Godot Setup
 // - Wlan TODO??
 
 - Installation
@@ -58,16 +52,16 @@ Mit Klick auf Blob wird dieser entfernt.
 */
 
 == User Interface
--> bitte öffnen
+$->$ bitte öffnen
 #image("./assets/godot-ui.png", height: 70%)
 
+== Linke Seite
 #grid(
   columns: (20%, 1fr),
   [
     #image("assets/image-4.png")
   ],
   [
-    === Linke Seite
     Szenenansicht, \
     Nodes für die Szene auswählen und umordnen. \
 
@@ -76,6 +70,7 @@ Mit Klick auf Blob wird dieser entfernt.
     `FileSystem` mit Icon Datei von Godot.
   ],
 )
+== Mitte
 #grid(
   columns: 1fr,
   [
@@ -83,16 +78,15 @@ Mit Klick auf Blob wird dieser entfernt.
     #v(20pt)
   ],
   [
-    === Mitte
     2D, 3D oder Skript Ansicht. Bei 2D Ansicht können die Elemente verschoben und in der Grösse angepasst werden. Es gibt einige Maus-Modi und Einstellungen.
     - Tipp zur Navigation: Leertaste halten und dann mit Maus bewegen
   ],
 )
+== Rechte Seite
 #grid(
   columns: (1fr, 25%),
 
   [
-    === Rechte Seite
     Einstellungen für ausgewähltes Node
     - (Bild hinzufügen, Deckkraft ändern und mehr).
     `Signals` : Events wie Mausklicks steuern.
@@ -203,8 +197,8 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 // - austauschbare Objekte in separaten Szenen
 //   - (Spielfigur, Mobs/Gegner, Items, Buttons, HUD)
 // - Im Tutorial wird Szene für Szene erstellt, es können auch zuerst alle leeren Szenen erstellt werden
+== Nodes
 #block(breakable: false)[
-  === Nodes
   Nodes können verschachtelt werden (ein Node enthält weitere Nodes).
   // - Node : allgemeiner Node für Game Logik (Scripts), ohne 2D Funktionalität
   \
@@ -222,9 +216,9 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
   / AudioStreamPlayer: Musik und Soundeffekte
 ]
 
+== Scripts + Signale (Events)
 #block(breakable: false)[
 
-  === Scripts + Signale (Events)
   `sceneName.gd` #image("assets/image-1.png")
 
   In unserem Beispiel automatisch erstellt: #image("assets/image-2.png")
@@ -242,22 +236,24 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 
 = Mehr Informationen
 
-=== Dokumentation
+== Dokumentation
 / offizielle Godot Dokumentation: https://docs.godotengine.org/en/latest/
 
-=== Tutorials
+== Tutorials
 // - #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
 / "Create A Platformer Game in 20 SECONDS! (Godot 4)": https://www.youtube.com/watch?v=thgdTkxeNJY
 / Weiteres Godot 2D Tutorial: https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html
 / Godot 3D Tutorial: https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html
 
-=== Pixelart oder andere Grafiken erstellen?
+== Pixelart oder andere Grafiken erstellen?
 
 / Gimp Tutorial: https://thegimptutorials.com/how-to-make-pixel-art/
 
 / Gimp: https://www.gimp.org/downloads/
 / weitere Programme (nicht alle Open Source): Affinity, Photopea, Penpot ...
 
-=== diese Folien
+== diese Folien
 
 Auf dem Github der Game Jam https://github.com/openost/game-jam
+
+#ending-slide()
