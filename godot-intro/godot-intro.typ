@@ -3,6 +3,8 @@
 
 #import "theme/stylings.typ": *
 #show: terms-style
+#show: heading-styles
+#show: config-styles
 
 
 #show: game-jam-theme.with(
@@ -19,51 +21,57 @@
 
 = Godot Einführung
 
-== Ablauf
-
-- Was ist Godot?
-- Setup
-- Godot Demo
-  - Programmierkenntnisse?
-- GD Script
-- Navigation / Menüs und Fenster
-  - erstelle Projekt
-  - speichern
-  - Spiel testen
-  // - Projekt wieder öffnen
-  - exportieren und itch.io // (besser schon früh testen)
+// == Ablauf
+// - Was ist Godot?
+// - Setup
+// - Godot Demo
+//   - Programmierkenntnisse?
+// - GD Script
+// - Navigation / Menüs und Fenster
+// // - erstelle Projekt
+// // - speichern
+// // - Spiel testen
+// // // - Projekt wieder öffnen
+// // - exportieren und itch.io // (besser schon früh testen)
 
 == Was ist Godot?
 
-- Open Source! MIT Lizenz
+#grid(
+  columns: (1fr, 1fr),
+  [
+    - Open Source! MIT Lizenz
 
-- Game Engine
+    - Game Engine
 
-  - für 2D und 3D Games
-- GD Script
-- finanziert von der "Godot Foundation"
+      - für 2D und 3D Games
+      - Export für Desktop, Mobile und Web
+    - GD Script
+    - finanziert von der "Godot Foundation"
 
-// "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
+    // "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
+
+  ],
+  [
+    #figure(
+      [
+        #image("./assets/godot-2d.png", height: 42%)
+        #v(-0.5em)
+        #image("./assets/godot-3d.png", height: 42%)
+      ],
+      caption: [https://godotengine.org/],
+    )
+  ],
+)
 
 = Setup
 
 == Godot Setup
-// - Wlan TODO??
 
-- Installation
-  - Download Godot (Version 4 ohne .NET empfohlen)
-  - es wird nicht installiert, sondern einfach die `.exe` Datei öffnen.
-/*
-== Einfaches Beispiel
-// Spieler der sich bewegt und bei Klick in andere Richtung bewegt
-Mit Klick auf Blob wird dieser entfernt.
+=== Installation von https://godotengine.org/
 
-+ Blob erstellen
-+ Mausklick-Event erstellen
-+ Im Script die Logik für Mausklick-Event programmieren
-+ Spiel testen
-+ Export
-*/
+- Download Godot (Version 4 ohne .NET empfohlen)
+
+- `.exe` Datei öffnen zum Starten
 
 == User Interface
 $->$ bitte öffnen
@@ -112,7 +120,8 @@ $->$ bitte öffnen
 
 // = Einfaches Jump and Run
 
-== Einfaches Jump and Run
+= Einfaches Jump and Run
+#pagebreak()
 Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
 #image("./assets/yt-platformer-game.png")
 
@@ -256,16 +265,26 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 // von hier gefunden: https://docs.godotengine.org/en/stable/getting_started/introduction/learn_to_code_with_gdscript.html
 == Tutorials
 // - #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
-/ "Create A Platformer Game in 20 SECONDS! (Godot 4)": https://www.youtube.com/watch?v=thgdTkxeNJY
-/ Weiteres Godot 2D Tutorial: https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html
-/ Godot 3D Tutorial: https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html
+==== "Create A Platformer Game in 20 SECONDS! (Godot 4)"
+https://www.youtube.com/watch?v=thgdTkxeNJY
+==== Weiteres Godot 2D Tutorial
+https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html
+==== Godot 3D Tutorial
+https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html
 
 == Pixelart oder andere Grafiken erstellen?
 
-/ Gimp Tutorial: https://thegimptutorials.com/how-to-make-pixel-art/
+=== Gimp Tutorial
+https://thegimptutorials.com/how-to-make-pixel-art/
 
-/ Gimp: https://www.gimp.org/downloads/
-/ weitere Programme (nicht alle Open Source): Affinity, Photopea, Penpot ...
+=== Gimp
+https://www.gimp.org/downloads/
+=== weitere Programme (nicht alle Open Source)
+Affinity, Photopea, Penpot ...
+
+
+// Weitere Game Engines
+// https://gamemaker.io/en (free, nicht open source?)
 
 == diese Folien
 

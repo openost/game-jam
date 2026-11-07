@@ -52,27 +52,8 @@
     ),
     config-methods(
       init: (self: none, body) => {
+        // see stylings.typ for set and show rules
         set text(size: 20pt, lang: lang, region: region)
-        set list(marker: box(
-          width: 0.25em,
-          place(
-            dy: -0.45em,
-            circle(
-              fill: colors.game-jam.secondary,
-              radius: 0.17em,
-            ),
-          ),
-        ))
-        show figure.caption: set text(size: 0.6em)
-        show footnote.entry: set text(size: 0.6em)
-        show heading: set text(fill: colors.game-jam.tertiary)
-        show link: it => if type(it.dest) == str {
-          set text(fill: colors.game-jam.tertiary)
-          it
-        } else {
-          it
-        }
-        show figure.where(kind: table): set figure.caption(position: top)
         body
       },
     ),
