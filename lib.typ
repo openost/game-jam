@@ -225,7 +225,7 @@
           ),
 
           table.cell(colspan: 2, v(0.5em)),
-          "Authoren: ",
+          "Autoren: ",
           self.store.authors.join(", "),
           "Datum: ",
           self.store.date,
