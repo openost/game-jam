@@ -125,15 +125,17 @@ $->$ bitte öffnen
 Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
 #image("./assets/yt-platformer-game.png")
 
-=== Projekt erstellen
 #grid(
   columns: (1fr, 1fr),
+  align: top,
   [
+    \
+    === Projekt erstellen
     Empfehlung: *Compatibility* \
     #text(size: 0.8em)[damit es auch für "Web" exportiert werden kann]
   ],
   [
-    #image("./assets/create-game.png", height: 90%)
+    #image("./assets/create-game.png", height: 100%)
 
   ],
 )
@@ -141,11 +143,17 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 
 
 === 2D Szene
-\
-2D Scene auswählen (`Node2D`)
+#grid(
+  columns: (1.5fr, 1fr),
+  [
+    2D Scene auswählen (`Node2D`)
 
--> hier werden die Plattform und der Spieler erstellt
-#image("assets/image.png", height: 50%)
+    #sym.arrow.r hier wird die Plattform und der Spieler erstellt
+  ],
+  [
+    #image("assets/image.png", height: 70%)
+  ],
+)
 
 ---
 
@@ -171,11 +179,11 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 - Bilder und Animationen
 - mehr Inhalt
 - 3D? 3D ist komplizierter und benötigt mehr Zeit für die Grafikelemente (3d-Modells)
-  \ > Tutorial verlinkt am Ende
+  \ #sym.arrow.r Tutorial verlinkt am Ende
 
 == Spiel testen und speichern
 
-Zurück zur 2D-Ansicht hier navigieren\
+Hier zurück zur 2D-Ansicht navigieren\
 #box(image("./assets/tabs-2d-scripts.png"))
 
 ==== Testen
@@ -187,7 +195,7 @@ Speichern mit `ctrl + s` und Szene benennen z. B. als "index".
 
 #block(breakable: false)[
   ==== Exportieren
-  Bei "Project" > "Export" ein Preset auswählen bei "Add". Ich wähle "Web" aus.
+  "Project" #sym.arrow.r "Export", dann ein Preset auswählen bei "Add". Ich wähle "Web" aus.
   ===== Presets fehlen?
   #image("assets/image-3.png")
 ]
@@ -196,17 +204,20 @@ Speichern mit `ctrl + s` und Szene benennen z. B. als "index".
 #image("./assets/export-web.png", width: 50%)
 Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speichere es dort als `index.html`.
 
-==== itch.io Veröffentlichung (optional)
+
+
+
 #grid(
-  columns: (1fr, 1fr),
+  columns: (1.3fr, 1fr),
   [
-    Auf itch.io hochladen und direkt im Browser spielbar machen.\
+    ==== itch.io Veröffentlichung (optional)
+    Auf itch.io hochladen und im Browser spielen.\
     + Benutzer erstellen
     + neues Spiel
     + "Export" Ordner in Zip komprimieren und hochladen. \ Hier ist wichtig, dass die Datei `index.html` benannt wird beim Export von Godot.
   ],
   [
-    #image("./assets/itch-io-upload.png", height: 90%)
+    #image("./assets/itch-io-upload.png", height: 100%)
   ],
 )
 
@@ -274,10 +285,9 @@ https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html
 
 == Pixelart oder andere Grafiken erstellen?
 
-==== Gimp Tutorial
-https://thegimptutorials.com/how-to-make-pixel-art/
 
 ==== Gimp
+https://thegimptutorials.com/how-to-make-pixel-art/ \
 https://www.gimp.org/downloads/
 
 ==== weitere Programme (nicht alle Open Source)
@@ -287,8 +297,8 @@ Affinity, Photopea, Penpot ...
 // Weitere Game Engines
 // https://gamemaker.io/en (free, nicht open source?)
 
-== diese Folien
+== Folien der Einführung
 
-/ Auf dem Github der Game Jam: https://github.com/openost/game-jam
+/ Folien auf dem Github der Game Jam: https://github.com/openost/game-jam
 
 #ending-slide()
