@@ -1,4 +1,4 @@
-
+#import "fonts-colors.typ": *
 
 // title-icon(self.store.icon, 100%)
 #let title-icon(icon, w: auto, h: 1em) = {

@@ -4,14 +4,14 @@
 #import "godot-intro/theme/fonts-colors.typ": *
 #import "godot-intro/theme/game-jam-graphics.typ": *
 #import "godot-intro/theme/slide-elements.typ": *
-
+#import "godot-intro/theme/slides-special.typ": *
 
 #let game-jam-theme(
   align: horizon,
   outline-align: top,
   alpha: 20%,
   lang: "de",
-  region: "ch",
+  region: "CH",
   font: fonts.game-jam.primary,
   title: self => utils.display-current-heading(depth: self.slide-level),
   subtitle: none,
@@ -52,7 +52,7 @@
     ),
     config-methods(
       init: (self: none, body) => {
-        set text(size: 20pt)
+        set text(size: 20pt, lang: lang, region: region)
         set list(marker: box(
           width: 0.25em,
           place(

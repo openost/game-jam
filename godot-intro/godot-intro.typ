@@ -1,6 +1,10 @@
 #import "@preview/touying:0.8.0": *
 #import "/lib.typ": *
 
+#import "theme/stylings.typ": *
+#show: terms-style
+
+
 #show: game-jam-theme.with(
   title: "Godot",
   subtitle: "Einführung",
@@ -8,6 +12,8 @@
   icon: image("/godot-intro/assets/godot-icon_color.svg", height: auto),
   authors: ("Jasmin",),
 )
+
+
 
 #title-slide()
 
@@ -32,6 +38,7 @@
 - Open Source! MIT Lizenz
 
 - Game Engine
+
   - für 2D und 3D Games
 - GD Script
 - finanziert von der "Godot Foundation"
@@ -241,11 +248,12 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
   // - wrapper : Container, etwas das andere Elemente zusammenhält. Z. B. ein Node das andere Nodes enthält ist dann ein Wrapper.
 ]
 
-= Mehr Informationen
+= Mehr Informationen und Links
 
 == Dokumentation
 / offizielle Godot Dokumentation: https://docs.godotengine.org/en/latest/
-
+/ learn GDScript: https://gdquest.github.io/learn-gdscript/
+// von hier gefunden: https://docs.godotengine.org/en/stable/getting_started/introduction/learn_to_code_with_gdscript.html
 == Tutorials
 // - #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
 / "Create A Platformer Game in 20 SECONDS! (Godot 4)": https://www.youtube.com/watch?v=thgdTkxeNJY
@@ -263,4 +271,4 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 
 / Auf dem Github der Game Jam: https://github.com/openost/game-jam
 
-// #ending-slide()
+#ending-slide()
