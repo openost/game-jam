@@ -15,7 +15,7 @@
     primary: rgb("#D72964"),
     secondary: rgb("#8C195F"),
     white: rgb("#FFFFFF"),
-    black: rgb("#000000"),
+    black: rgb("#272727"),
   ),
 )
 
@@ -179,8 +179,21 @@
     config-page(
       fill: game-jam-bg,
       header: none,
-      footer: none,
-      margin: (top: 1em, left: 1em),
+      footer: [
+        #text(
+          fill: colors.game-jam.neutral-dark,
+          weight: "semibold",
+          table(
+            gutter: (0.25em, 0em),
+            stroke: none,
+            align: left,
+            columns: (2em, auto, auto),
+            "", "Autoren: ", self.store.authors.join(", "),
+            "", "Datum: ", self.store.date,
+          ),
+        )
+      ],
+      margin: (top: 1em, left: 1em, bottom: 5em, right: 1em),
     ),
   )
 
@@ -202,39 +215,53 @@
           gutter: (0.5em, 0em),
           stroke: none,
           align: left,
-          columns: (auto, auto),
+          columns: (0%, 100%),
 
           table.cell(
+            // title with icon
             colspan: 2,
             align(center, text(
               weight: "bold",
               size: 3.5em,
               font: fonts.game-jam.square,
               fill: colors.game-jam.tertiary,
-              self.store.title,
-            )),
-          ),
-          table.cell(
-            colspan: 2,
-            align(center, text(
-              size: 2em,
-              font: fonts.game-jam.square-o,
-              fill: colors.game-jam.tertiary,
-              self.store.subtitle,
-            )),
-          ),
+              top-edge: 0.6em, // line-height
+              [#v(-1em) // margin top
 
-          table.cell(colspan: 2, v(0.5em)),
-          "Autoren: ",
-          self.store.authors.join(", "),
-          "Datum: ",
-          self.store.date,
+                #text(
+                  size: 1.2em,
+                  self.store.title,
+                )
+                #box(
+                  height: 1em,
+                  // width: 100%,
+                  self.store.icon,
+                )
+                #text(
+                  size: 1em,
+                  font: fonts.game-jam.square-o,
+                  self.store.subtitle,
+                )
+              ],
+            )),
+          ),
         ),
         grid(
           columns: 1fr,
           align: center,
-
-          image("/poster/export/game-jam-2026-pixel-jar.gif", width: 70%),
+          [
+            #v(6em)
+            #place(
+              dx: 40mm,
+              dy: -50mm,
+              image("/godot-intro/assets/game-jam-2026-pixel-jar-shadow.svg", width: 10em),
+            )
+            #place(
+              dx: 35mm,
+              dy: -55mm,
+              image("/godot-intro/assets/game-jam-2026-pixel-jar.gif", width: 10em),
+            )
+          ]
           // grid.cell(game-jam-logo(8cm)),
           // grid.cell(v(2cm)),
           // grid.cell(game-jam-title(3cm, pixels: false)),
@@ -373,6 +400,7 @@
   font: fonts.game-jam.primary,
   title: self => utils.display-current-heading(depth: self.slide-level),
   subtitle: none,
+  icon: none,
   date: datetime.today().display("[day].[month].[year]"),
   authors: none,
   footer-pagenum: text(
@@ -442,6 +470,7 @@
       alpha: alpha,
       title: title,
       subtitle: subtitle,
+      icon: icon,
       date: date,
       authors: authors,
       footer-pagenum: footer-pagenum,

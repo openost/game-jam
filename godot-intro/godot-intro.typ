@@ -2,8 +2,9 @@
 #import "/lib.typ": *
 
 #show: game-jam-theme.with(
-  title: "Godot Einführung",
-  subtitle: image("/web/img/godot.png", height: 2em),
+  title: "Godot",
+  subtitle: "Einführung",
+  icon: image("/web/img/godot.png", height: auto),
   authors: ("Jasmin",),
 )
 
