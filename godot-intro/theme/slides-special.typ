@@ -181,29 +181,29 @@
 ) = touying-slide-wrapper(self => {
   let content = {
     grid(
-      columns: (1fr, 1fr),
-      rows: 1fr,
-      place(
-        align(
-          center + horizon,
-          text(
-            title,
-            size: 3em,
-            weight: "bold",
-            fill: colors.game-jam.white,
-          ),
-        ),
-        dy: 10em,
-        dx: 4em,
-      ),
-      box(
-        inset: (left: 4em),
-        height: 100%,
-        align(
-          center + horizon,
-          body,
-        ),
-      ),
+      //   columns: (1fr, 1fr),
+      //   rows: 1fr,
+      //   place(
+      //     align(
+      //       center + horizon,
+      //       text(
+      //         title,
+      //         size: 3em,
+      //         weight: "bold",
+      //         fill: colors.game-jam.white,
+      //       ),
+      //     ),
+      //     dy: 10em,
+      //     dx: 4em,
+      //   ),
+      //   box(
+      //     inset: (left: 4em),
+      //     height: 100%,
+      //     align(
+      //       center + horizon,
+      body,
+      //     ),
+      //   ),
     )
   }
 

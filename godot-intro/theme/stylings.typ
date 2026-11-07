@@ -23,11 +23,18 @@
     size: 1.2em,
     fill: colors.game-jam.neutral-dark,
   )
-
+  show heading.where(level: 5): set text(
+    fill: colors.game-jam.neutral-dark,
+  )
   body
 }
 
 #let config-styles(body) = {
+  // for *bold* text
+  show emph: set text(
+    weight: "semibold",
+  )
+
   set list(marker: box(
     width: 0.25em,
     place(

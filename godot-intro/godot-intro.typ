@@ -13,6 +13,8 @@
   // https://godotengine.org/press/
   icon: image("/godot-intro/assets/godot-icon_color.svg", height: auto),
   authors: ("Jasmin",),
+
+  // config-common(show-notes-on-second-screen: right), // change ending slide position
 )
 
 
@@ -21,20 +23,23 @@
 
 = Godot Einführung
 
-// == Ablauf
-// - Was ist Godot?
-// - Setup
-// - Godot Demo
-//   - Programmierkenntnisse?
-// - GD Script
-// - Navigation / Menüs und Fenster
-// // - erstelle Projekt
-// // - speichern
-// // - Spiel testen
-// // // - Projekt wieder öffnen
-// // - exportieren und itch.io // (besser schon früh testen)
+#speaker-note[
+  == Ablauf (erster Entwurf)
+  - Was ist Godot?
+  - Setup
+  - Godot Demo
+    - Programmierkenntnisse?
+  - GD Script
+  - Navigation / Menüs und Fenster
+  - erstelle Projekt
+  - speichern
+  - Spiel testen
+  // - Projekt wieder öffnen
+  - exportieren und itch.io // (besser schon früh testen)
+]
 
 == Was ist Godot?
+#pause
 
 #grid(
   columns: (1fr, 1fr),
@@ -44,11 +49,14 @@
     - Game Engine
 
       - für 2D und 3D Games
+
       - Export für Desktop, Mobile und Web
     - GD Script
     - finanziert von der "Godot Foundation"
 
-    // "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
+    #speaker-note[
+      "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
+    ]
 
   ],
   [
@@ -100,7 +108,9 @@ $->$ bitte öffnen
     #v(20pt)
   ],
   [
-    2D, 3D oder Skript Ansicht. Bei 2D Ansicht können die Elemente verschoben und in der Grösse angepasst werden. Es gibt einige Maus-Modi und Einstellungen.
+    2D, 3D und Skript Ansicht
+    - In der  2D/3D Ansicht können z. B. die Elemente verschoben und vergrössert werden.
+    - Es gibt einige Maus-Modi und Einstellungen.
     - Tipp zur Navigation: Leertaste halten und dann mit Maus bewegen
   ],
 )
@@ -110,8 +120,9 @@ $->$ bitte öffnen
 
   [
     Einstellungen für ausgewähltes Node
-    - (Bild hinzufügen, Deckkraft ändern und mehr).
-    `Signals` : Events wie Mausklicks steuern.
+
+    - Bild hinzufügen, Deckkraft ändern und mehr
+    `Signals` : Events wie Mausklicks steuern und abrufen
   ],
   [
     #image("assets/image-7.png")
@@ -159,25 +170,38 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 
 === Plattform
 + `StaticBody2D`
-  + `Sprite2D` + Icon hinzufügen als Textur
-  + `CollisionShape2D` mit `New RectangleShape2D`
-  + Nodes gruppieren um das verschieben einfacher zu machen #box(image("./assets/group.png"))
-  + Grösse ändern #box(image("./assets/resize.png"))
+
+#pause
++ `Sprite2D` + Icon hinzufügen als Textur
+#pause
++ `CollisionShape2D` mit `New RectangleShape2D`
+#pause
++ Nodes gruppieren um das verschieben einfacher zu machen #box(image("./assets/group.png"))
+#pause
++ Grösse ändern #box(image("./assets/resize.png"))
 
 ---
 === Spieler
 + `CharacterBody2D`
-  + `Sprite2D` + Icon hinzufügen als Textur
-  + `CollisionShape2D` mit `NewRectangleShape2D`
-  + Script erstellen mit "Basic Movement" aktiv + \ dort die
-    `JUMP_VELOCITY` anpassen #box(image("./assets/add-script.png"))
+
+#pause
++ `Sprite2D` + Icon hinzufügen als Textur
+#pause
++ `CollisionShape2D` mit `NewRectangleShape2D`
+#pause
++ #box(image("./assets/add-script.png")) Script erstellen mit "Basic Movement" aktiv + dort die
+  `JUMP_VELOCITY` anpassen
 
 ---
 
 === Was fehlt?
+#pause
 - Ton
+
 - Bilder und Animationen
 - mehr Inhalt
+- Aufteilung in mehrere Szenen
+- Best Practices (Nodes umbenennen, Ordnerstruktur)
 - 3D? 3D ist komplizierter und benötigt mehr Zeit für die Grafikelemente (3d-Modells)
   \ #sym.arrow.r Tutorial verlinkt am Ende
 
@@ -223,31 +247,35 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 
 
 
-// https://jasmin-f.itch.io/easy-platformer-game
+#speaker-note[
+  https://jasmin-f.itch.io/easy-platformer-game
+]
 
 = Zusammenfassung Godot
-// // bei anderem Tutorial:
-// === Scenes/Szenen
-// - austauschbare Objekte in separaten Szenen
-//   - (Spielfigur, Mobs/Gegner, Items, Buttons, HUD)
-// - Im Tutorial wird Szene für Szene erstellt, es können auch zuerst alle leeren Szenen erstellt werden
+
 == Nodes
 #block(breakable: false)[
   Nodes können verschachtelt werden (ein Node enthält weitere Nodes).
-  // - Node : allgemeiner Node für Game Logik (Scripts), ohne 2D Funktionalität
+
   \
   / RigidBody2D: "wrapper" für weitere Nodes, speichere Nodes darin
 
-  // / Area2D : erkennt overlap
-  // / AnimatedSprite2D: Bilder als Animation zu Area2D hinzufügen \ (z. B. zwei abwechselnde Bilder)
   / CollisionShape2D: Hitbox für Node, eigene Formen möglich
   / Timer: mache etwas nach XX Sekunden
   / CanvasLayer: HUD / UI, Text, Buttons, Einstellungsmenü
-  // / Label : Text
-  // / Button
-  // / ColorRect : Hintergrundfarbe
-  // / TextureRect : Hintergrundbild
+
   / AudioStreamPlayer: Musik und Soundeffekte
+]
+
+#speaker-note[
+  Weitere Nodes:
+  - Node : allgemeiner Node für Game Logik (Scripts), ohne 2D Funktionalität
+  / Area2D: erkennt overlap
+  / AnimatedSprite2D: Bilder als Animation zu Area2D hinzufügen \ (z. B. zwei abwechselnde Bilder)
+  / Label: Text
+  / Button: ...
+  / ColorRect: Hintergrundfarbe
+  / TextureRect: Hintergrundbild
 ]
 
 == Scripts + Signale (Events)
@@ -257,45 +285,56 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 
   In unserem Beispiel automatisch erstellt: #image("assets/image-2.png")
 
+]
 
-  // - Mit Events werden Benutzerinteraktionen wie z. B. ein Mausklick erkannt und an den Script weitergegeben.
-  // - z.B. Klick auf Blob > starte Funktion die den Blob löscht und einen Punkt zum Score hinzufügt
-
-  // == Begriffe
-  // - HUD : Heads up Display, enthält z. B. den Punktestand und Text zum Programmierkenntnisse
-  // - Hitbox : in diesem Bereich wird die Kollision
-  // - Mob : Gegner
-  // - wrapper : Container, etwas das andere Elemente zusammenhält. Z. B. ein Node das andere Nodes enthält ist dann ein Wrapper.
+#speaker-note[
+  == Infos von offiziellem 2D Tutorial
+  - Mit Events werden Benutzerinteraktionen wie z. B. ein Mausklick erkannt und an den Script weitergegeben.
+  - z.B. Klick auf Blob > starte Funktion die den Blob löscht und einen Punkt zum Score hinzufügt
+  ==== Begriffe
+  - HUD : Heads up Display, enthält z. B. den Punktestand und Text zum Programmierkenntnisse
+  - Hitbox : in diesem Bereich wird die Kollision
+  - Mob : Gegner
+  - wrapper : Container, etwas das andere Elemente zusammenhält. Z. B. ein Node das andere Nodes enthält ist dann ein Wrapper.
 ]
 
 = Mehr Informationen und Links
 
-== Dokumentation
-/ offizielle Godot Dokumentation: https://docs.godotengine.org/en/latest/
-/ learn GDScript: https://gdquest.github.io/learn-gdscript/
+== Tutorials und Dokumentation
+===== offizielle Godot Dokumentation
+https://docs.godotengine.org/en/latest/
+===== learn GDScript
+https://gdquest.github.io/learn-gdscript/
 // von hier gefunden: https://docs.godotengine.org/en/stable/getting_started/introduction/learn_to_code_with_gdscript.html
-== Tutorials
-// - #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
-==== "Create A Platformer Game in 20 SECONDS! (Godot 4)"
-https://www.youtube.com/watch?v=thgdTkxeNJY
-==== Weiteres Godot 2D Tutorial
+===== Weiteres Godot 2D Tutorial
 https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html
-==== Godot 3D Tutorial
+===== Godot 3D Tutorial
 https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html
+===== "Create A Platformer Game in 20 SECONDS! (Godot 4)"
+https://www.youtube.com/watch?v=thgdTkxeNJY
 
 == Pixelart oder andere Grafiken erstellen?
 
+#grid(
+  columns: (1fr, 30%),
+  [
+    ==== Gimp
+    https://thegimptutorials.com/how-to-make-pixel-art/ \
+    https://www.gimp.org/downloads/
 
-==== Gimp
-https://thegimptutorials.com/how-to-make-pixel-art/ \
-https://www.gimp.org/downloads/
+    ==== weitere Programme (nicht alle Open Source)
+    Affinity, Photopea, Penpot ...
 
-==== weitere Programme (nicht alle Open Source)
-Affinity, Photopea, Penpot ...
+  ],
+  [
+    #game-jam-jar-with-shadow()
+  ],
+)
 
-
-// Weitere Game Engines
-// https://gamemaker.io/en (free, nicht open source?)
+#speaker-note[
+  Weitere Game Engines
+  - https://gamemaker.io/en (free, aber nicht open source?)
+]
 
 == Folien der Einführung
 
