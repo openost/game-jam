@@ -7,7 +7,9 @@
 #set align(center)
 #set text(font: fonts.game-jam.primary, weight: "extrabold")
 
-#game-jam-title(5.75cm)
+#import "../godot-intro/theme/game-jam-graphics.typ": *
+
+#game-jam-logo(5.75cm)
 
 #set par(leading: .5em, spacing: .5em)
 
@@ -25,7 +27,7 @@
 ]
 #v(-1em)
 
-#game-jam-logo(
+#game-jam-jar-with-lid-and-particles(
   10cm,
   qr: true,
   url: true,

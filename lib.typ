@@ -1,5 +1,4 @@
 #import "@preview/touying:0.6.1": *
-#import "@preview/codetastic:0.2.2": qrcode
 
 #import "godot-intro/theme/fonts-colors.typ": *
 #import "godot-intro/theme/game-jam-graphics.typ": *
