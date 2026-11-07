@@ -274,12 +274,13 @@ https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html
 
 == Pixelart oder andere Grafiken erstellen?
 
-=== Gimp Tutorial
+==== Gimp Tutorial
 https://thegimptutorials.com/how-to-make-pixel-art/
 
-=== Gimp
+==== Gimp
 https://www.gimp.org/downloads/
-=== weitere Programme (nicht alle Open Source)
+
+==== weitere Programme (nicht alle Open Source)
 Affinity, Photopea, Penpot ...
 
 
