@@ -4,7 +4,8 @@
 #show: game-jam-theme.with(
   title: "Godot",
   subtitle: "Einführung",
-  icon: image("/web/img/godot.png", height: auto),
+  // https://godotengine.org/press/
+  icon: image("/godot-intro/assets/godot-icon_color.svg", height: auto),
   authors: ("Jasmin",),
 )
 
@@ -26,11 +27,16 @@
   // - Projekt wieder öffnen
   - exportieren und itch.io // (besser schon früh testen)
 
-== Wieso Godot?
+== Was ist Godot?
 
-*Open Source!*
+- Open Source! MIT Lizenz
 
-"Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
+- Game Engine
+  - für 2D und 3D Games
+- GD Script
+- finanziert von der "Godot Foundation"
+
+// "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
 
 = Setup
 
@@ -255,6 +261,6 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 
 == diese Folien
 
-Auf dem Github der Game Jam https://github.com/openost/game-jam
+/ Auf dem Github der Game Jam: https://github.com/openost/game-jam
 
-#ending-slide()
+// #ending-slide()
