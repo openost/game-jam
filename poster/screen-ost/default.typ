@@ -1,4 +1,4 @@
-#import "/lib.typ": *
+#import "/typ/lib.typ": *
 
 #let dimensions = (
   margin: (x: 100pt, bottom: 178pt, top: 228pt),

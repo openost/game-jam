@@ -50,7 +50,7 @@
     rows: (1fr, 1fr),
     grid.cell(
       image(
-        "/godot-intro/assets/game-jam-2026-pixel-jar.gif",
+        "assets/game-jam-2026-pixel-jar.gif",
         width: 8mm,
       ),
       rowspan: 2,
@@ -87,10 +87,5 @@
 )
 
 #let logo-open-ost() = {
-  [
-    #box([
-      #image("../assets/open-ost-logo.svg", height: 2em)
-    ])
-    // #h(1em) Open\\OST
-  ]
+  box(image("assets/open-ost-logo.svg", height: 2em))
 }

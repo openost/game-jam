@@ -1,4 +1,3 @@
-
 #let colors = (
   game-jam: (
     primary: rgb("#f37947"),

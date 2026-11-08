@@ -1,9 +1,9 @@
 #import "@preview/touying:0.6.1": *
 
-#import "godot-intro/theme/fonts-colors.typ": *
-#import "godot-intro/theme/game-jam-graphics.typ": *
-#import "godot-intro/theme/slide-elements.typ": *
-#import "godot-intro/theme/slides-special.typ": *
+#import "./fonts-colors.typ": *
+#import "./game-jam-graphics.typ": *
+#import "./slide-elements.typ": *
+#import "./slides-special.typ": *
 
 #let game-jam-theme(
   align: horizon,

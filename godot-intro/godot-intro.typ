@@ -1,7 +1,6 @@
 #import "@preview/touying:0.8.0": *
-#import "/lib.typ": *
+#import "/typ/lib.typ": *
 
-#import "theme/stylings.typ": *
 #show: terms-style
 #show: heading-styles
 #show: config-styles
@@ -11,7 +10,7 @@
   title: "Godot",
   subtitle: "Einführung",
   // https://godotengine.org/press/
-  icon: image("/godot-intro/assets/godot-icon_color.svg", height: auto),
+  icon: image("/typ/assets/godot-icon_color.svg", height: auto),
   authors: ("Jasmin",),
 
   // config-common(show-notes-on-second-screen: right), // change ending slide position
@@ -62,9 +61,9 @@
   [
     #figure(
       [
-        #image("./assets/godot-2d.png", height: 42%)
+        #image("/typ/assets/godot-2d.png", height: 42%)
         #v(-0.5em)
-        #image("./assets/godot-3d.png", height: 42%)
+        #image("/typ/assets/godot-3d.png", height: 42%)
       ],
       caption: [https://godotengine.org/],
     )
@@ -83,13 +82,13 @@
 
 == User Interface
 $->$ bitte öffnen
-#image("./assets/godot-ui.png", height: 70%)
+#image("/typ/assets/godot-ui.png", height: 70%)
 
 == Linke Seite
 #grid(
   columns: (20%, 1fr),
   [
-    #image("assets/image-4.png")
+    #image("/typ/assets/image-4.png")
   ],
   [
     Szenenansicht, \
@@ -104,7 +103,7 @@ $->$ bitte öffnen
 #grid(
   columns: 1fr,
   [
-    #image("assets/image-6.png", height: 50%)
+    #image("/typ/assets/image-6.png", height: 50%)
     #v(20pt)
   ],
   [
@@ -125,7 +124,7 @@ $->$ bitte öffnen
     `Signals` : Events wie Mausklicks steuern und abrufen
   ],
   [
-    #image("assets/image-7.png")
+    #image("/typ/assets/image-7.png")
   ],
 )
 
@@ -134,7 +133,7 @@ $->$ bitte öffnen
 = Einfaches Jump and Run
 #pagebreak()
 Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
-#image("./assets/yt-platformer-game.png")
+#image("/typ/assets/yt-platformer-game.png")
 
 == Projekt erstellen
 #grid(
@@ -146,7 +145,7 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
     #text(size: 0.8em)[damit es auch für "Web" exportiert werden kann]
   ],
   [
-    #image("./assets/create-game.png", height: 100%)
+    #image("/typ/assets/create-game.png", height: 100%)
 
   ],
 )
@@ -162,7 +161,7 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
     #sym.arrow.r hier wird die Plattform und der Spieler erstellt
   ],
   [
-    #image("assets/image.png", height: 70%)
+    #image("/typ/assets/image.png", height: 70%)
   ],
 )
 
@@ -176,9 +175,9 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 #pause
 + `CollisionShape2D` mit `New RectangleShape2D`
 #pause
-+ Nodes gruppieren um das verschieben einfacher zu machen #box(image("./assets/group.png"))
++ Nodes gruppieren um das verschieben einfacher zu machen #box(image("/typ/assets/group.png"))
 #pause
-+ Grösse ändern #box(image("./assets/resize.png"))
++ Grösse ändern #box(image("/typ/assets/resize.png"))
 ]))
 
 ---
@@ -192,7 +191,7 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 #pause
 + `CollisionShape2D` mit `NewRectangleShape2D`
 #pause
-+ #box(image("./assets/add-script.png")) Script erstellen mit "Basic Movement" aktiv + dort die
++ #box(image("/typ/assets/add-script.png")) Script erstellen mit "Basic Movement" aktiv + dort die
   `JUMP_VELOCITY` anpassen
 ]))
 ---
@@ -211,11 +210,11 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 == Spiel testen und speichern
 
 Hier zurück zur 2D-Ansicht navigieren\
-#box(image("./assets/tabs-2d-scripts.png"))
+#box(image("/typ/assets/tabs-2d-scripts.png"))
 
 ==== Testen
 Mit `F6` oder über das Menü \
-#box(image("./assets/test-game-f6.png"))
+#box(image("/typ/assets/test-game-f6.png"))
 
 ==== Speichern
 Speichern mit `ctrl + s` und Szene benennen z. B. als "index".
@@ -224,11 +223,11 @@ Speichern mit `ctrl + s` und Szene benennen z. B. als "index".
   ==== Exportieren
   "Project" #sym.arrow.r "Export", dann ein Preset auswählen bei "Add". Ich wähle "Web" aus.
   ===== Presets fehlen?
-  #image("assets/image-3.png")
+  #image("/typ/assets/image-3.png")
 ]
 
 ===== Export Einstellungen
-#image("./assets/export-web.png", width: 50%)
+#image("/typ/assets/export-web.png", width: 50%)
 Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speichere es dort als `index.html`.
 
 
@@ -244,7 +243,7 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
     + "Export" Ordner in Zip komprimieren und hochladen. \ Hier ist wichtig, dass die Datei `index.html` benannt wird beim Export von Godot.
   ],
   [
-    #image("./assets/itch-io-upload.png", height: 100%)
+    #image("/typ/assets/itch-io-upload.png", height: 100%)
   ],
 )
 
@@ -284,9 +283,9 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 == Scripts + Signale (Events)
 #block(breakable: false)[
 
-  `sceneName.gd` #image("assets/image-1.png")
+  `sceneName.gd` #image("/typ/assets/image-1.png")
 
-  In unserem Beispiel automatisch erstellt: #image("assets/image-2.png")
+  In unserem Beispiel automatisch erstellt: #image("/typ/assets/image-2.png")
 
 ]
 
