@@ -64,7 +64,11 @@
               // #v(0em) // margin top
               #text(size: 1.2em, self.store.title)
               // #title-icon(self.store.icon)
-              #text(size: 1em, font: fonts.game-jam.square-o, self.store.subtitle)
+              #text(
+                size: 1em,
+                font: fonts.game-jam.square-o,
+                self.store.subtitle,
+              )
             ],
           ))
         ],
@@ -90,21 +94,25 @@
     config-page(
       fill: game-jam-bg,
       header: none,
-      footer: [
-        #text(
+      footer: {
+        set text(
           fill: colors.game-jam.neutral-dark,
           weight: "semibold",
+        )
+        pad(
+          left: 2.25em,
           table(
             gutter: (0.25em, 0em),
             stroke: none,
-            align: left,
-            columns: (2em, auto, auto),
-            "", "Autoren: ", self.store.authors.join(", "),
-            "", "Datum: ", self.store.date,
+            align: left + horizon,
+            columns: (auto, auto, auto),
+            table.cell(rowspan: 2, logo-open-ost()),
+            "Autoren:", self.store.authors.join(", "),
+            "Datum:", self.store.date,
           ),
           // #op
         )
-      ],
+      },
       margin: (top: 1em, left: 1em, bottom: 5em, right: 1em),
     ),
   )
@@ -179,34 +187,6 @@
   title: none,
   body: none,
 ) = touying-slide-wrapper(self => {
-  let content = {
-    grid(
-      //   columns: (1fr, 1fr),
-      //   rows: 1fr,
-      //   place(
-      //     align(
-      //       center + horizon,
-      //       text(
-      //         title,
-      //         size: 3em,
-      //         weight: "bold",
-      //         fill: colors.game-jam.white,
-      //       ),
-      //     ),
-      //     dy: 10em,
-      //     dx: 4em,
-      //   ),
-      //   box(
-      //     inset: (left: 4em),
-      //     height: 100%,
-      //     align(
-      //       center + horizon,
-      body,
-      //     ),
-      //   ),
-    )
-  }
-
   let new-config = utils.merge-dicts(
     config,
     config-page(
@@ -222,22 +202,16 @@
           dy: 5cm,
           text(
             font: fonts.game-jam.square,
-            // font: fonts.game-jam.primary,
             fill: colors.game-jam.tertiary,
             size: 1.5em,
-          )[Viel Spass an der ],
+          )[Viel Spass am],
         )
 
-        // open ost logo proposal
         place(
           bottom + left,
           dx: 1cm,
           dy: -1cm,
-          // center,
-          // dy: 13cm,
-          [
-            #logo-open-ost()
-          ],
+          logo-open-ost(),
         )
       },
       header: none,
@@ -249,7 +223,6 @@
   touying-slide(
     self: self,
     config: new-config,
-    content,
+    grid(body),
   )
 })
-

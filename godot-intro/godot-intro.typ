@@ -136,12 +136,12 @@ $->$ bitte öffnen
 Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
 #image("./assets/yt-platformer-game.png")
 
+== Projekt erstellen
 #grid(
   columns: (1fr, 1fr),
   align: top,
   [
     \
-    === Projekt erstellen
     Empfehlung: *Compatibility* \
     #text(size: 0.8em)[damit es auch für "Web" exportiert werden kann]
   ],
@@ -153,7 +153,7 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 
 
 
-=== 2D Szene
+== 2D Szene
 #grid(
   columns: (1.5fr, 1fr),
   [
@@ -168,9 +168,9 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 
 ---
 
-=== Plattform
+== Plattform
+#box(height: 50%,align(top,[
 + `StaticBody2D`
-
 #pause
 + `Sprite2D` + Icon hinzufügen als Textur
 #pause
@@ -179,9 +179,12 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 + Nodes gruppieren um das verschieben einfacher zu machen #box(image("./assets/group.png"))
 #pause
 + Grösse ändern #box(image("./assets/resize.png"))
+]))
 
 ---
-=== Spieler
+== Spieler
+#box(height: 50%,align(top,[
+
 + `CharacterBody2D`
 
 #pause
@@ -191,10 +194,10 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 #pause
 + #box(image("./assets/add-script.png")) Script erstellen mit "Basic Movement" aktiv + dort die
   `JUMP_VELOCITY` anpassen
-
+]))
 ---
 
-=== Was fehlt?
+== Was fehlt?
 #pause
 - Ton
 
@@ -338,6 +341,6 @@ https://www.youtube.com/watch?v=thgdTkxeNJY
 
 == Folien der Einführung
 
-/ Folien auf dem Github der Game Jam: https://github.com/openost/game-jam
+/ Folien auf dem Github des Game Jams: https://github.com/openost/game-jam
 
 #ending-slide()
