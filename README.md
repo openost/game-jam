@@ -8,8 +8,13 @@ Pixelart (+ first poster design)
 
 typst commands
 ```shell
+# watch poster
 typst watch poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root .
-typst compile poster/poster.typ --font-path=web/fonts/ --root .
+# compile poster (pdf)
+typst compile poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root .
+# compile poster (png)
+typst compile poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root . --format=png --ppi=300
+# watch screen advertisements
 typst watch poster/screen-ost/default.typ --root . --font-path=web/fonts --format png --input format=display poster/screen-ost/{p}.png
 ```
 

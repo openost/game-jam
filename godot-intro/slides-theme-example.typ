@@ -1,7 +1,23 @@
-// #import "/lib.typ": *
 #import "@preview/touying:0.8.0": *
+#import "/lib.typ": *
 
-#import themes.university: *
+#import "theme/stylings.typ": *
+#show: heading-styles
+#show: terms-style
+#show: config-styles
+
+
+#show: game-jam-theme.with(
+  title: "Godot",
+  subtitle: "Einführung",
+  // https://godotengine.org/press/
+  icon: image("/godot-intro/assets/godot-icon_color.svg", height: auto),
+  authors: ("Jasmin",),
+
+  config-common(show-notes-on-second-screen: right),
+)
+
+// advanced start
 #import "@preview/cetz:0.5.2"
 #import "@preview/fletcher:0.5.8" as fletcher: edge, node
 #import "@preview/numbly:0.1.0": numbly
@@ -13,23 +29,33 @@
 #let cetz-canvas = touying-reduce.with(cetz)
 #let fletcher-diagram = touying-reduce.with(fletcher)
 
-#show: university-theme.with(
-  aspect-ratio: "16-9",
-  // align: horizon,
-  // config-common(handout: true),
-  config-common(frozen-counters: (theorem-counter,)), // freeze theorem counter for animation
-  config-info(
-    title: [Title],
-    subtitle: [Subtitle],
-    author: [Authors],
-    date: datetime.today(),
-    institution: [Institution],
-  ),
-)
-
 #set heading(numbering: numbly("{1}.", default: "1.1"))
 
+// advanced end
+
 #title-slide()
+
+= Headings
+
+== heading 2
+=== heading 3
+text
+=== heading 3
+/ terms: https://godotengine.org/
+/ terms: https://godotengine.org/
+/ terms: lorem ipsum
+==== heading 4
+text
+
+
+- list element 1
+- list element 2
+- list element 3
+  - list element nested
+
+
+
+// -------------------------------------------
 
 == Outline <touying:hidden>
 
