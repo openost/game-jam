@@ -1,9 +1,8 @@
-#import "@preview/touying:0.6.1": *
-
 #import "./fonts-colors.typ": *
 #import "./game-jam-graphics.typ": *
 #import "./slide-elements.typ": *
 #import "./slides-special.typ": *
+#import "./stylings.typ": *
 
 #let game-jam-theme(
   align: horizon,
@@ -25,6 +24,10 @@
   ..args,
   body,
 ) = {
+  show: terms-style
+  show: heading-styles
+  show: config-styles
+
   set text(lang: lang, font: font)
   show: touying-slides.with(
     config-page(

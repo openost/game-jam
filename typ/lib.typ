@@ -4,3 +4,4 @@
 #import "./slides-special.typ": *
 #import "./stylings.typ": *
 #import "./theme.typ": *
+#import "./deps.typ": *

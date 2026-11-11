@@ -1,4 +1,4 @@
-#import "@preview/touying:0.6.1": *
+#import "deps.typ": *
 #import "game-jam-graphics.typ": *
 #import "fonts-colors.typ": *
 #import "slide-elements.typ": *

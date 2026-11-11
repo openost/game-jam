@@ -1,10 +1,4 @@
-#import "@preview/touying:0.8.0": *
 #import "/typ/lib.typ": *
-
-#show: terms-style
-#show: heading-styles
-#show: config-styles
-
 
 #show: game-jam-theme.with(
   title: "Godot",
