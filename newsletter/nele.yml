@@ -1,0 +1,22 @@
+email:
+    template: template.html
+
+sender:
+    host: asmtp.mail.hostpoint.ch
+    ssl: true
+    port: 465
+    starttls: false
+    user: info@open-ost.ch
+    sender: '"Open Game Jam" <info@open-ost.ch>'
+
+source:
+    provider: sqlite
+    url: ../signups/signups.sqlite
+    query: select * from signups;
+
+draft:
+    first_name: Maria
+    last_name: Muster
+    gender: w
+    email: info@open-ost.ch
+
