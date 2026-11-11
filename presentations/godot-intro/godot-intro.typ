@@ -73,6 +73,7 @@
 - Download Godot (Version 4 ohne .NET empfohlen)
 
 - `.exe` Datei öffnen zum Starten
+- (oder in Steam nutzen)
 
 == User Interface
 $->$ bitte öffnen
@@ -162,31 +163,31 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
 ---
 
 == Plattform
-#box(height: 50%,align(top,[
-+ `StaticBody2D`
-#pause
-+ `Sprite2D` + Icon hinzufügen als Textur
-#pause
-+ `CollisionShape2D` mit `New RectangleShape2D`
-#pause
-+ Nodes gruppieren um das verschieben einfacher zu machen #box(image("/typ/assets/group.png"))
-#pause
-+ Grösse ändern #box(image("/typ/assets/resize.png"))
+#box(height: 50%, align(top, [
+  + `StaticBody2D`
+  #pause
+  + `Sprite2D` + Icon hinzufügen als Textur
+  #pause
+  + `CollisionShape2D` mit `New RectangleShape2D`
+  #pause
+  + Nodes gruppieren um das verschieben einfacher zu machen #box(image("/typ/assets/group.png"))
+  #pause
+  + Grösse ändern #box(image("/typ/assets/resize.png"))
 ]))
 
 ---
 == Spieler
-#box(height: 50%,align(top,[
+#box(height: 50%, align(top, [
 
-+ `CharacterBody2D`
+  + `CharacterBody2D`
 
-#pause
-+ `Sprite2D` + Icon hinzufügen als Textur
-#pause
-+ `CollisionShape2D` mit `NewRectangleShape2D`
-#pause
-+ #box(image("/typ/assets/add-script.png")) Script erstellen mit "Basic Movement" aktiv + dort die
-  `JUMP_VELOCITY` anpassen
+  #pause
+  + `Sprite2D` + Icon hinzufügen als Textur
+  #pause
+  + `CollisionShape2D` mit `NewRectangleShape2D`
+  #pause
+  + #box(image("/typ/assets/add-script.png")) Script erstellen mit "Basic Movement" aktiv + dort die
+    `JUMP_VELOCITY` anpassen
 ]))
 ---
 
@@ -296,18 +297,35 @@ Wähle "Export Project..." erstelle einen neuen Ordner z. B. "Export" und speich
 
 = Mehr Informationen und Links
 
-== Tutorials und Dokumentation
+== Dokumentation
 ===== offizielle Godot Dokumentation
-https://docs.godotengine.org/en/latest/
+- https://docs.godotengine.org/en/latest/ (Englisch)
+- https://docs.godotengine.org/de/4.x/ (Deutsch)
+
+
+== Tutorials
+
 ===== learn GDScript
-https://gdquest.github.io/learn-gdscript/
+- https://gdquest.github.io/learn-gdscript/ (Englisch)
 // von hier gefunden: https://docs.godotengine.org/en/stable/getting_started/introduction/learn_to_code_with_gdscript.html
-===== Weiteres Godot 2D Tutorial
-https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html
-===== Godot 3D Tutorial
-https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html
+
+===== Brackeys Godot Beginner Tutorial
+https://www.youtube.com/watch?v=LOhfqjmasi0 (Englisch)
+
 ===== "Create A Platformer Game in 20 SECONDS! (Godot 4)"
-https://www.youtube.com/watch?v=thgdTkxeNJY
+https://www.youtube.com/watch?v=thgdTkxeNJY (Englisch)
+
+#pagebreak()
+
+===== Godot 2D Tutorial
+- https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html (Englisch)
+- https://docs.godotengine.org/de/4.x/getting_started/first_2d_game/index.html (Deutsch)
+
+===== Godot 3D Tutorial
+- https://docs.godotengine.org/en/latest/getting_started/first_3d_game/index.html (Englisch)
+- https://docs.godotengine.org/de/4.x/getting_started/first_3d_game/index.html (Deutsch)
+
+
 
 == Pixelart oder andere Grafiken erstellen?
 
