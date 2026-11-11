@@ -1,9 +1,4 @@
-#import "@preview/codetastic:0.2.2": qrcode
-
-#let c0 = rgb("#D72964")
-#let c1 = rgb("#8C195F")
-#let c2 = rgb("#000000")
-#let c3 = rgb("#FFFFFF")
+#import "/typ/lib.typ": *
 
 #let dimensions = (
   margin: (x: 100pt, bottom: 178pt, top: 228pt),
@@ -13,11 +8,11 @@
 )
 
 #let footer-logo = align(right, image(
-  "../../web/img/ost-logo.svg",
+  "/web/img/ost-logo.svg",
   width: dimensions.margin.top,
 ))
 
-#let lrbox = (cont, swap: false, small: false, fill: c0) => {
+#let lrbox = (cont, swap: false, small: false, fill: colors.ost.primary) => {
   let dim = (auto, 1fr)
   box(
     width: 100%,
@@ -38,11 +33,11 @@
 }
 
 #let qrbox = (title, data, small: true, swap: false) => {
-  set text(fill: c3)
+  set text(fill: colors.ost.white)
   let cont = (
     align(horizon + center, box(
-      fill: c3,
-      qrcode(data, colors: (c3, c2), width: dimensions.margin.x, quiet-zone: 2),
+      fill: colors.ost.white,
+      qrcode(data, colors: (colors.ost.white, colors.ost.black), width: dimensions.margin.x, quiet-zone: 2),
       //   image(
       //   width: dimensions.margin.x, //100pt,
       //   height: dimensions.margin.x, //100pt,
@@ -77,7 +72,7 @@
 }
 
 #let normal-layout(
-  img: "../../web/img/jam.png",
+  img: "/web/img/jam.png",
   dim: dimensions,
   body,
 ) = {
@@ -87,7 +82,7 @@
   )
   if img != none {
     place(dy: -dim.toppad, dx: -dim.margin.x, box(
-      fill: gradient.linear(dir: ltr, rgb("#f9b26f"), rgb("#f37947")),
+      fill: game-jam-bg,
       width: 100% + dim.margin.x * 2,
       height: dim.toppad,
       {
@@ -118,8 +113,8 @@
     header-ascent: 0pt,
   )
   set table(stroke: none)
-  set text(size: dimensions.text.at(2), font: "Adelle Sans", fill: c2)
-  show heading: set text(fill: c1)
+  set text(size: dimensions.text.at(2), font: fonts.ost.primary, fill: colors.ost.black)
+  show heading: set text(fill: colors.ost.secondary)
   show heading.where(level: 1): set text(size: dimensions.text.at(5))
   show heading.where(level: 2): set text(size: dimensions.text.at(4))
   show heading.where(level: 3): set text(size: dimensions.text.at(3))
@@ -132,8 +127,8 @@
 
   #{
     set page(margin: 0pt)
-    place(box(width: 100%, height: 50%, fill: rgb("#f9b26f")))
-    place(bottom, box(width: 100%, height: 50%, fill: rgb("#f37947")))
+    place(box(width: 100%, height: 50%, fill: colors.game-jam.secondary))
+    place(bottom, box(width: 100%, height: 50%, fill: colors.game-jam.primary))
     align(horizon, image("../game-jam-2026-poster.pdf", width: 100%))
     // include "../game-jam-2026-poster.typ"
   }
@@ -217,7 +212,7 @@
       box(radius: 50%, clip: true, image(
         height: 4em,
         width: 4em,
-        "../../web/img/logo_only.svg",
+        "/web/img/logo_only.svg",
       )),
       align(horizon, [
         Verein open\\OST \
