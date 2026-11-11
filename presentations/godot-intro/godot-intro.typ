@@ -64,6 +64,15 @@
   ],
 )
 
+#speaker-note[
+  // TODO?
+  == Unterschied zu Unity
+  - prefabs > Szenen
+    - Szenen sind Komponente die genutzt werden können
+  - Nodes verschachteln
+    - aber nur 1 Skript pro Node (kann leere Nodes einfügen)
+]
+
 = Setup
 
 == Godot Setup
@@ -174,6 +183,13 @@ Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platform
   #pause
   + Grösse ändern #box(image("/typ/assets/resize.png"))
 ]))
+
+#speaker-note[
+  // TODO?
+
+  Versteckte Einstellung für Grösse und mehr ändern von Objekten. Klick auf die "Shape"
+  // Bild hier
+]
 
 ---
 == Spieler
