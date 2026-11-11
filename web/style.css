@@ -289,6 +289,10 @@ h2 {
   background-color: var(--color-orange);
 }
 
+.calendar .day .schedule .hrs-0 {
+  height: 2em;
+}
+
 .calendar .day .schedule .hrs-1 {
   height: 2em;
 }
