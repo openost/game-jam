@@ -11,18 +11,22 @@
 }
 
 // #game-jam-jar-with-shadow()
-#let game-jam-jar-with-shadow() = {
-  place(
-    dx: 0mm,
-    dy: 0mm,
-    image("assets/game-jam-2026-pixel-jar-shadow.svg", width: 10em),
-  )
-  place(
-    dx: -5mm,
-    dy: -5mm,
-    image("assets/game-jam-2026-pixel-jar.gif", width: 10em),
-  )
-}
+#let game-jam-jar-with-shadow(width: 10em) = box(
+  width: width,
+  height: width * 1.2,
+  {
+    place(
+      dx: 0mm,
+      dy: 0mm,
+      image("assets/game-jam-2026-pixel-jar-shadow.svg", width: width),
+    )
+    place(
+      dx: -5mm,
+      dy: -5mm,
+      image("assets/game-jam-2026-pixel-jar.gif", width: width),
+    )
+  },
+)
 
 
 //usage: grid.cell(game-jam-jar-with-lid-and-particles(8cm)),
@@ -95,7 +99,12 @@
   height: height,
   width: height * 3.2,
   align(center, {
-    let bxs(c) = box(fill: c, stroke: c, height: height / 12, width: height / 12)
+    let bxs(c) = box(
+      fill: c,
+      stroke: c,
+      height: height / 12,
+      width: height / 12,
+    )
 
     let cs = colors.game-jam
 
