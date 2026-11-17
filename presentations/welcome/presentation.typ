@@ -13,8 +13,12 @@
 
 == Welcome
 
-- First ever Game Jam organized by open\\OST!
-- Topic: #h(2em) #text(baseline: .2em,size: 3em, font: fonts.game-jam.square-o, fill: colors.game-jam.tertiary)[OPEN]
+#align(center)[
+
+=== First ever Game Jam organized by open\\OST!
+\
+Topic: \ #text(baseline: .3em,size: 4em, font: fonts.game-jam.square-o, fill: colors.game-jam.tertiary)[OPEN]
+]
 
 == Sponsors and partners
 
@@ -106,18 +110,20 @@
   - Doors close after XXX
 
   - We can't let you stay here after 24:00 :(
+    - Studentenwohnheim
 ]
 
 == Sunday
 
 - Upload to itch.io
-  - TODO
 
-- Playtesting
-  - TODO
+- Playtesting & Voting
 
 - Prizes
-  - TODO
+  - Game featured on Open Game Jam and open\\OST Websites
+  - Free upload to Steam
+  - Open Source Gin
+  - Gift cards
 
 = Organizational
 
@@ -183,7 +189,7 @@
 
 == Photos
 
-Who is OK with photos being taken?
+=== Who is OK with photos being taken?
 
 (Will be posted on social media platforms and the game-jam website)
 
@@ -212,6 +218,6 @@ Who is OK with photos being taken?
 
 == Teams
 
-For those who aren't in a team yet: now is your time to collab!
+=== For those who aren't in a team yet: now is your time to collab!
 
 #ending-slide()
