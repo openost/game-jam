@@ -3,6 +3,7 @@
 #show: game-jam-theme.with(
   title: "Welcome",
   subtitle: "",
+  lang: "en",
   icon: pad(top: 15em, game-jam-jar-with-shadow(width: 15em)),
   authors: ("Georgiy Shevoroshkin",),
 )
@@ -15,10 +16,70 @@
 
 #align(center)[
 
-=== First ever Game Jam organized by open\\OST!
-\
-Topic: \ #text(baseline: .3em,size: 4em, font: fonts.game-jam.square-o, fill: colors.game-jam.tertiary)[OPEN]
+  === First ever Game Jam organized by open\\OST!
+  \
+  #pause
+  *Topic:* \
+  #pause
+  #text(
+    baseline: .3em,
+    size: 4em,
+    font: fonts.game-jam.square-o,
+    fill: colors.game-jam.tertiary,
+  )[OPEN]
 ]
+
+== Who ist open\\OST?
+
+
+#let logo(size) = {
+  let colors = (
+    c0: rgb("#D72964"),
+    c1: rgb("#8C195F"),
+    c2: rgb("#191919"),
+    c3: rgb("#FFFFFF"),
+  )
+  let (c0, c1, c2) = colors
+  let arc = (start, stop, r, ..args) => {
+    let (fst, ..pts) = range(int((stop - start).deg())).map(x => {
+      let a = start.rad() + (x * 1deg).rad()
+      (
+        r * calc.cos(a),
+        r * calc.sin(a),
+      )
+    })
+    curve(
+      ..args,
+      curve.move(fst),
+      ..pts.map(curve.line),
+    )
+  }
+  let s = (thickness: size * .101, cap: "round")
+  let p = size / 2
+  box(width: size, height: size, {
+    place(dx: p, dy: p, arc(0deg, 270deg, p, stroke: (..s, paint: c2)))
+    place(dx: p, dy: p, arc(45deg, 315deg, p * .8, stroke: (..s, paint: c1)))
+    place(dx: p, dy: p, arc(90deg, 360deg, p * .6, stroke: (..s, paint: c0)))
+  })
+}
+#grid(
+  columns: (1fr, auto),
+  [
+    - #link("open-ost.ch")
+
+    - Promoting Open Source Software at OST
+
+    #pause
+
+    - Software from students, for students
+
+    #pause
+
+    - Organizing cool events!!1!1 $=>$ #link("studentenportal.ch/events")
+  ],
+
+  uncover("1-", logo(10em)),
+)
 
 == Sponsors and partners
 
@@ -70,16 +131,17 @@ Topic: \ #text(baseline: .3em,size: 4em, font: fonts.game-jam.square-o, fill: co
     gutter: 1em,
     columns: 3,
     align: top,
-    [Friday], [Saturday], [Sunday],
+    [Friday], uncover("2-")[Saturday], uncover("3-")[Sunday],
     stack(
       dir: ttb,
       bx[14:30 - 14:55][Arrival],
       bx[15:00 - 15:15][Intro],
       bx[15:15 - 16:00][Intro to Godot],
-      bx[16:00 - 19:00][Planning / Hacking],
+      bx[16:00 - 19:00][Planning/Hacking],
       bx[19:00 - 20:00][Dinner],
       bx[20:00 - Open End][Hacking],
     ),
+    pause,
     stack(
       dir: ttb,
       bx[08:00 - 09:00][Breakfast],
@@ -89,6 +151,8 @@ Topic: \ #text(baseline: .3em,size: 4em, font: fonts.game-jam.square-o, fill: co
       bx[19:00 - 20:00][Dinner],
       bx[20:00 - Open End][Hacking],
     ),
+
+    pause,
     stack(
       dir: ttb,
       bx[08:00 - 09:00][Breakfast],
@@ -104,26 +168,24 @@ Topic: \ #text(baseline: .3em,size: 4em, font: fonts.game-jam.square-o, fill: co
 
 #slide[
   - Right afterwards: Intro to Godot by Jasmin
-
+  #pause
   - Food will be delivered to the "chill space" below
-
-  - Doors close after XXX
+  #pause
+  - Doors close after 22:00
 
   - We can't let you stay here after 24:00 :(
-    - Studentenwohnheim
+    - All-nighter option: Studentenwohnheim
 ]
 
 == Sunday
 
 - Upload to itch.io
-
 - Playtesting & Voting
-
-- Prizes
+- Prizes! #pause
   - Game featured on Open Game Jam and open\\OST Websites
   - Free upload to Steam
   - Open Source Gin
-  - Gift cards
+  - \$\$\$
 
 = Organizational
 
@@ -207,11 +269,17 @@ Topic: \ #text(baseline: .3em,size: 4em, font: fonts.game-jam.square-o, fill: co
 - In room 1.262 you'll always find someone to help you out
   - Ask us or other people to play-test the game when you have a prototype :)
 
+#pause
+
 - Make sure you plan conservatively! (scope creep)
   - Ask us for an opinion as soon as you have a plan
 
+#pause
+
 - Plan a schedule and check each day how far you've gotten
   - Back-up plan in case something fails
+
+#pause
 
 - Submit the game as soon as it's in a working state
   - You can re-submit as many times as you want

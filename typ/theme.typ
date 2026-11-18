@@ -4,6 +4,7 @@
 #import "./slides-special.typ": *
 #import "./stylings.typ": *
 
+
 #let game-jam-theme(
   align: horizon,
   outline-align: top,

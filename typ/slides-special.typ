@@ -107,8 +107,18 @@
             align: left + horizon,
             columns: (auto, auto, auto),
             table.cell(rowspan: 2, logo-open-ost()),
-            "Autoren:", self.store.authors.join(", "),
-            "Datum:", self.store.date,
+
+            context (
+              de: "Autoren:",
+              en: "Authors:",
+            ).at(text.lang),
+
+            self.store.authors.join(", "),
+            context (
+              de: "Datum:",
+              en: "Date:",
+            ).at(text.lang),
+            self.store.date,
           ),
           // #op
         )
@@ -204,7 +214,12 @@
             font: fonts.game-jam.square,
             fill: colors.game-jam.tertiary,
             size: 1.5em,
-          )[Viel Spass am],
+
+            context (
+              de: "Viel Spass am",
+              en: "Happy hacking at the",
+            ).at(text.lang),
+          ),
         )
 
         place(

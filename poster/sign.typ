@@ -13,7 +13,7 @@
 == Open Game Jam
 
 #set text(
-  font: fonts.game-jam.square-o,
+  font: fonts.game-jam.square,
   fill: colors.game-jam.tertiary,
 )
 
