@@ -129,8 +129,7 @@
     set page(margin: 0pt)
     place(box(width: 100%, height: 50%, fill: colors.game-jam.secondary))
     place(bottom, box(width: 100%, height: 50%, fill: colors.game-jam.primary))
-    align(horizon, image("../game-jam-2026-poster.pdf", width: 100%))
-    // include "../game-jam-2026-poster.typ"
+    align(horizon, image("../advert/game-jam-2026-poster.pdf", width: 100%))
   }
   #title-layout[
 

@@ -53,10 +53,12 @@
     v(0.8em),
     stack(
       dir: ltr,
-      spacing: 4em,
+      spacing: 3em,
       image("/web/img/sdj-logo.png", height: 3.7em - 0.3em),
       image("/web/img/nine-logo.svg", height: 6em - 0.3em),
+      image("/web/img/tony-logo.svg", height: 4em),
       image("/web/img/ost-logo.svg", height: 4em - 0.3em),
+      image("/web/img/egswiss-logo.png", height: 3.5em),
     ),
   ))
 ]))

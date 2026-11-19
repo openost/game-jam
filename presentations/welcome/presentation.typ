@@ -91,14 +91,17 @@
     columns: (1.5fr, 1.5fr, 1fr),
     gutter: 1em,
     image("/web/img/hostpoint-logo.png", height: 2.6em - 0.5em),
+
+    image("/web/img/open-circle-logo.svg", height: 2em - 0.5em),
     image("/web/img/sdj-logo.png", height: 3.7em - 0.5em),
-    image("/web/img/ost-logo.svg", height: 4em - 0.5em),
 
     image("/web/img/impulsort-logo.png", height: 3em - 0.5em),
     image("/web/img/nine-logo.svg", height: 6em - 0.5em),
-    image("/web/img/egswiss-logo.png", height: 4em - 0.5em),
 
-    image("/web/img/open-circle-logo.svg", height: 2em - 0.5em),
+    image("/web/img/tony-logo.svg", height: 4em),
+    image("/web/img/ost-logo.svg", height: 4em - 0.5em),
+
+    image("/web/img/egswiss-logo.png", height: 4em - 0.5em),
   ),
 ))
 
