@@ -1,29 +1,18 @@
 # Open GameJam
 
-Poster design with sponsors 
-- .typ Datei for Typst
+<https://game-jam.open-ost.ch>
 
-Pixelart (+ first poster design)
-- .afphoto design for affinity photo
+Ein Game Jam ist ein Zusammentreffen von Personen, um gemeinsam innerhalb einer kurzen Zeitspanne ein Spiel zu entwickeln. Dabei arbeiten Personen mit verschiedenen Kenntnissen interdisziplinär zusammen.
 
-typst commands
-```shell
-# watch poster
-typst watch poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root .
-# compile poster (pdf)
-typst compile poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root .
-# compile poster (png)
-typst compile poster/game-jam-2026-poster.typ --font-path=web/fonts/ --root . --format=png --ppi=300
-# watch screen advertisements
-typst watch poster/screen-ost/default.typ --root . --font-path=web/fonts --format png --input format=display poster/screen-ost/{p}.png
-```
+[Wikipedia-Artikel zu Game Jam](https://de.wikipedia.org/wiki/Game_Jam)
 
-Used fonts in /web/fonts
-- https://www.dafont.com/squarefont.font?text=squarefont
-- https://fonts.google.com/specimen/Roboto+Condensed?query=condensed
+Dieses Mal geht es um das Thema **open**, du bist frei was du damit verbindest.  
+Ein paar Beispiele: ein offenes Konfitürenglas, eine offene Tür oder etwas was Open Source ist.
 
-"open Game Jam" Game Repository
+Organisiert vom [**open\\OST**](https://www.open-ost.ch/events/game-jam/) Verein an der OST Rapperswil, Schweiz.
+
+Fragen? Du kannst du uns auf [Matrix](https://matrix.to/#/#game-jam:open-ost.ch) oder [Discord](https://discord.gg/ck3jGP3sc) kontaktieren.
+
+## "open Game Jam" Game Repository
+
 - https://codeberg.org/jasmin-f/godot-jam-overflow
-
-Penpot website prototype + design system for the web
-- (will be added later)

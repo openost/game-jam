@@ -174,7 +174,7 @@
   - Doors close after 22:00
 
   - We can't let you stay here after 24:00 :(
-    - All-nighter option: Studentenwohnheim
+    - All-nighter option: Studentenwohnheim ;)
 ]
 
 == Sunday
