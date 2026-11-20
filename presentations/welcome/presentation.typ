@@ -92,14 +92,11 @@
     gutter: 1em,
     image("/web/img/hostpoint-logo.png", height: 2.6em - 0.5em),
 
-    image("/web/img/open-circle-logo.svg", height: 2em - 0.5em),
-    image("/web/img/sdj-logo.png", height: 3.7em - 0.5em),
+    image("/web/img/open-circle-logo.svg", height: 2em - 0.5em), image("/web/img/sdj-logo.png", height: 3.7em - 0.5em),
 
-    image("/web/img/impulsort-logo.png", height: 3em - 0.5em),
-    image("/web/img/nine-logo.svg", height: 6em - 0.5em),
+    image("/web/img/impulsort-logo.png", height: 3em - 0.5em), image("/web/img/nine-logo.svg", height: 6em - 0.5em),
 
-    image("/web/img/tony-logo.svg", height: 4em),
-    image("/web/img/ost-logo.svg", height: 4em - 0.5em),
+    image("/web/img/tony-logo.svg", height: 4em), image("/web/img/ost-logo.svg", height: 4em - 0.5em),
 
     image("/web/img/egswiss-logo.png", height: 4em - 0.5em),
   ),
@@ -117,6 +114,22 @@
     image("./steiner.png"), image("./caterina.png"), image("./rappimomo.webp"),
   ),
 ))
+
+== Organizers
+
+#{
+  set text(1.5em)
+  grid(
+    columns: (1fr, 1fr, 1fr),
+    rows: (2em, 2em),
+    align: center + horizon,
+    [Jasmin], [Filippo], [Georgiy],
+    ..("jasmin-f", "filippoAndretta", "omega-800").map(l => link(
+      "github.com/" + l,
+      "@" + l,
+    )),
+  )
+}
 
 = Schedule
 
@@ -168,9 +181,8 @@
     ),
   )
 }
-
 #slide[
-  - Right afterwards: Intro to Godot by Jasmin
+  - Right afterwards: Intro to Godot #text(baseline: .5em, box(image("/typ/assets/godot-icon_color.svg", height: 2em))) by Jasmin
   #pause
   - Food will be delivered to the "chill space" below
   #pause
@@ -186,7 +198,7 @@
 - Playtesting & Voting
 - Prizes! #pause
   - Game featured on Open Game Jam and open\\OST Websites
-  - Free upload to Steam
+  - Free upload to Steam #pause
   - Open Source Gin
   - \$\$\$
 
@@ -199,7 +211,7 @@
   align: horizon,
   gutter: 1em,
   [
-    === 1.262
+    === 1.262 (from 17:15 on)
     main room (an organizer will always be here)
 
     === 1.207
@@ -286,6 +298,10 @@
 
 - Submit the game as soon as it's in a working state
   - You can re-submit as many times as you want
+
+== Questions?
+
+=== Questions?
 
 == Teams
 
