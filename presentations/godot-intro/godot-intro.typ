@@ -13,22 +13,14 @@
 
 
 #title-slide()
+#speaker-note[
+  Herzlich willkomme au vu minere Site zu de Game Jam und de Godot Ifüehrig.
+]
 
 = Godot Einführung
-
 #speaker-note[
-  == Ablauf (erster Entwurf)
-  - Was ist Godot?
-  - Setup
-  - Godot Demo
-    - Programmierkenntnisse?
-  - GD Script
-  - Navigation / Menüs und Fenster
-  - erstelle Projekt
-  - speichern
-  - Spiel testen
-  // - Projekt wieder öffnen
-  - exportieren und itch.io // (besser schon früh testen)
+  Godot anschauen und dann zusammen ein minimales Spiel machen.
+  Am Besten lernt man Game Entwicklung durch machen.
 ]
 
 == Was ist Godot?
@@ -48,6 +40,13 @@
     - finanziert von der "Godot Foundation"
 
     #speaker-note[
+      Fragen:
+      - Wer kannte Godot schon vor der Game Jam oder hat schon davon gehört gehabt?
+      - Wer hat schon einmal mit Godot etwas gemacht?
+        - Was?
+
+      >
+
       "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Software Freedom Conservancy not-for-profit."
     ]
 
@@ -84,8 +83,36 @@
 - `.exe` Datei öffnen zum Starten
 - (oder in Steam nutzen)
 
+
+== Projekt erstellen
+
+#grid(
+  columns: (1fr, 1fr),
+  align: top,
+  [
+    \
+    $->$ bitte Godot öffnen
+    \
+    \
+    Empfehlung: *Compatibility* \
+    #text(size: 0.8em)[damit es auch für "Web" exportiert werden kann]
+
+    \
+    Speicherort z. B. in neuem Ordner "code" \
+    `/Users/<Name>/code/godot`
+
+  ],
+  [
+    #image("/typ/assets/create-game.png", height: 100%)
+  ],
+)
+
+
 == User Interface
-$->$ bitte öffnen
+
+#speaker-note[
+  Das ist das UI von Godot, es ist aufgeteilt in 4 Hauptteile...
+]
 #image("/typ/assets/godot-ui.png", height: 70%)
 
 == Linke Seite
@@ -138,21 +165,6 @@ $->$ bitte öffnen
 #pagebreak()
 Idee von #link("https://www.youtube.com/watch?v=thgdTkxeNJY")["Create A Platformer Game in 20 SECONDS! (Godot 4)"]
 #image("/typ/assets/yt-platformer-game.png")
-
-== Projekt erstellen
-#grid(
-  columns: (1fr, 1fr),
-  align: top,
-  [
-    \
-    Empfehlung: *Compatibility* \
-    #text(size: 0.8em)[damit es auch für "Web" exportiert werden kann]
-  ],
-  [
-    #image("/typ/assets/create-game.png", height: 100%)
-
-  ],
-)
 
 
 
