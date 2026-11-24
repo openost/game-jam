@@ -28,21 +28,66 @@
   },
 )
 
+#let pixels-left(height, color: colors.game-jam.tertiary) = {
+  let bxs = box(
+    fill: color,
+    stroke: color,
+    height: height / 12,
+    width: height / 12,
+  )
+  place(dx: height / 6 * -.7, dy: height / 6 * -5.1, bxs)
+  place(dx: height / 6 * .4, dy: height / 6 * -4.6, bxs)
+  place(dx: height / 6 * 1.2, dy: height / 6 * -3.8, bxs)
+  place(dx: height / 6 * -.1, dy: height / 6 * -2.6, bxs)
+  place(dx: height / 6 * -.3, dy: height / 6 * -3.4, bxs)
+}
+
+#let pixels-right(height, color: colors.game-jam.tertiary) = {
+  let bxs = box(
+    fill: color,
+    stroke: color,
+    height: height / 12,
+    width: height / 12,
+  )
+  place(dx: height * 18.4 / 6, dy: height / 6 * -.2, bxs)
+  place(dx: height * 20.3 / 6, dy: height / 6 * 0.2, bxs)
+  place(dx: height * 19.3 / 6, dy: height / 6 * 0.7, bxs)
+  place(dx: height * 17.9 / 6, dy: height / 6 * 1.2, bxs)
+  place(dx: height * 19.9 / 6, dy: height / 6 * 1.8, bxs)
+}
+
+#let pixels-alt-left(height, color: colors.game-jam.neutral-dark) = {
+  let bx(s) = box(fill: color, stroke: color, height: s, width: s)
+
+  let bxb = bx(height * .07)
+  let bxs = bx(height * .04)
+
+  place(dx: 0pt, dy: 0pt, bxs)
+  place(dx: height * .21, dy: height * .04, bxs)
+  place(dx: height * .01, dy: height * .24, bxs)
+  place(dx: height * .07, dy: height * .1, bxb)
+}
+
+#let pixels-alt-right(height, color: colors.game-jam.neutral-dark) = {
+  let bx(s) = box(fill: color, stroke: color, height: s, width: s)
+
+  let bxb = bx(height * .07)
+  let bxs = bx(height * .04)
+
+  place(dx: height * 1.41, dy: height * .23, bxs)
+  place(dx: height * 1.73, dy: height * .13, bxb)
+  place(dx: height * 1.57, dy: height * .21, bxs)
+  place(dx: height * 1.61, dy: height * .31, bxb)
+  place(dx: height * 1.75, dy: height * .37, bxs)
+}
 
 //usage: grid.cell(game-jam-jar-with-lid-and-particles(8cm)),
 #let game-jam-jar-with-lid-and-particles(height, qr: false, url: false) = {
-  let bx(c, s: 1.2em) = box(fill: c, stroke: c, height: s, width: s)
-
-  let bxb = bx.with(s: height * .07)
-  let bxs = bx.with(s: height * .04)
   let cs = colors.game-jam
 
   box(width: height * 1.8, height: height, {
     // jam art pixels
-    place(dx: 0pt, dy: 0pt, bxs(cs.neutral-dark))
-    place(dx: height * .21, dy: height * .04, bxs(cs.neutral-dark))
-    place(dx: height * .01, dy: height * .24, bxs(cs.neutral-dark))
-    place(dx: height * .07, dy: height * .1, bxb(cs.neutral-dark))
+    pixels-alt-left(height)
 
     place(
       dx: height * .08,
@@ -67,11 +112,7 @@
     }))
 
     // lid art pixels
-    place(dx: height * 1.41, dy: height * .23, bxs(cs.neutral-dark))
-    place(dx: height * 1.73, dy: height * .13, bxb(cs.neutral-dark))
-    place(dx: height * 1.57, dy: height * .21, bxs(cs.neutral-dark))
-    place(dx: height * 1.61, dy: height * .31, bxb(cs.neutral-dark))
-    place(dx: height * 1.75, dy: height * .37, bxs(cs.neutral-dark))
+    pixels-alt-right(height)
 
     if url {
       place(
@@ -99,13 +140,6 @@
   height: height,
   width: height * 3.2,
   align(center, {
-    let bxs(c) = box(
-      fill: c,
-      stroke: c,
-      height: height / 12,
-      width: height / 12,
-    )
-
     let cs = colors.game-jam
 
     set par(leading: height * .1)
@@ -119,18 +153,10 @@
 
     if pixels {
       // GAME pixels
-      place(dx: height / 6 * -.7, dy: height / 6 * -5.1, bxs(cs.tertiary))
-      place(dx: height / 6 * .4, dy: height / 6 * -4.6, bxs(cs.tertiary))
-      place(dx: height / 6 * 1.2, dy: height / 6 * -3.8, bxs(cs.tertiary))
-      place(dx: height / 6 * -.1, dy: height / 6 * -2.6, bxs(cs.tertiary))
-      place(dx: height / 6 * -.3, dy: height / 6 * -3.4, bxs(cs.tertiary))
+      pixels-left(height)
 
       // JAM pixels
-      place(dx: height * 18.4 / 6, dy: height / 6 * -.2, bxs(cs.tertiary))
-      place(dx: height * 20.3 / 6, dy: height / 6 * 0.2, bxs(cs.tertiary))
-      place(dx: height * 19.3 / 6, dy: height / 6 * 0.7, bxs(cs.tertiary))
-      place(dx: height * 17.9 / 6, dy: height / 6 * 1.2, bxs(cs.tertiary))
-      place(dx: height * 19.9 / 6, dy: height / 6 * 1.8, bxs(cs.tertiary))
+      pixels-right(height)
     }
   }),
 )

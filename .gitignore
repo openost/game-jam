@@ -4,3 +4,6 @@
 .direnv
 result
 signups/signups.sqlite
+img
+poster/certificate/certificate.typ
+poster/certificate/certificate.pdf
